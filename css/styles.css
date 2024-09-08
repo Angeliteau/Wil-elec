@@ -321,7 +321,7 @@ input[type="submit"]:hover {
   }
   h1 {
     font-size: 30px;
-    padding: 20px 20px 0px 20px;
+    padding: 50px 20px 0px 20px;
   }
   br {
     display: none;
@@ -335,11 +335,9 @@ input[type="submit"]:hover {
   }
 
   p.domaine {
-    margin: 30px 20px 50px 20px;
+    margin: 50px 20px 100px 20px;
     padding: 10px;
     font-size: 20px;
-    background-color: #00000091;
-    border-radius: 10px;
   }
   .landing-page {
     background-position: top;
