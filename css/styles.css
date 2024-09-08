@@ -350,6 +350,18 @@ input[type="submit"]:hover {
     font-size: 18px;
   }
 
+  .titre {
+    display: flex;
+    justify-content: center;
+  }
+
+  .titre h6 {
+    background-color: #ffcc00;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 50px;
+  }
+
   .wrapper {
     display: flex;
     gap: 20px;
