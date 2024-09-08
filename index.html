@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Wil'Elec - Electricité générale</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-
-</head>
-<body>
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <main>
-        <section id="section-1">
 
-            <header>
-                
-                <img src="images/mp carte wil'elec(2)_cropped_page-0001.png" alt="">
-    
-                <nav class="navbar">
-                    <a href="#page" class="link">Accueil</a>
-                    <a href="#section-2" class="link">Mes services</a>
-                    <a href="#formulaire" class="link">Devis</a>
-                    <a href="tel:" class="CTA">07 69 24 36 13</a>
-                </nav>
-            </header>
-            
-            <div class="landing-page">
-                <h1 class="big-title">Expert en Électricité Générale <br>à Lille et Environs</h1>
-                <p class="domaine">Domotique - Intrusion - Vidéosurveillance - Dépannage</p>
-                <a href="#formulaire" class="CTA">DEMANDEZ UN DEVIS GRATUIT</a>
-                <div class="scroll">Défilez vers le bas <i class="fa-solid fa-chevron-down fa-xs" style="color: #ffffff;"></i></div>
-            </div>
+      
+      <section id="section-1">
+        <header>
+          <img src="images/mp carte wil'elec(2)_cropped_page-0001.png" alt="" />
+
+          <nav class="navbar">
+            <a href="#page" class="link">Accueil</a>
+            <a href="#section-2" class="link">Mes services</a>
+            <a href="#formulaire" class="link">Devis</a>
+            <a href="tel:" class="CTA">07 69 24 36 13</a>
+          </nav>
+        </header>
+
+        <div class="landing-page">
+          <h1 class="big-title">
+            Expert en Électricité Générale <br />à Lille et Environs
+          </h1>
+          <p class="domaine">
+            Domotique - Intrusion - Vidéosurveillance - Dépannage
+          </p>
+          <a href="#formulaire" class="CTA">DEMANDEZ UN DEVIS GRATUIT</a>
 
 
-        </section>
-
-        
-        <section id="section-2">
-
-     
-
-        <div class="titre">
-
-          <h6 class="services">Mes services</h6>
+          <!--
           
+        
+          <div class="scroll">
+            Défilez vers le bas
+            <i
+              class="fa-solid fa-chevron-down fa-xs"
+              style="color: #ffffff"
+            ></i>
+          </div>
+  -->
+
+
+
+        </div>
+      </section>
+
+      <section id="section-2">
+        <div class="titre">
+          <h6 class="services">Mes services</h6>
         </div>
 
-
         <div class="wrapper">
-
           <div class="card">
-            <i class="fa-solid fa-house-signal " fa-4x></i>
+            <i class="fa-solid fa-house-signal" fa-4x></i>
             <h4>Domotique</h4>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-video"></i>
-            <h4>Vidéo <br>surveillance</h4>
+            <h4>Vidéo <br />surveillance</h4>
           </div>
 
           <div class="card">
@@ -68,61 +77,58 @@
 
           <div class="card">
             <i class="fa-solid fa-circle-check"></i>
-            <h4>Mise en <br>conformité</h4>
+            <h4>Mise en <br />conformité</h4>
           </div>
-
-
         </div>
+      </section>
 
+      <section id="section-3">
+        <div id="formulaire">
+          <h6>Devis gratuit</h6>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="74e9e3a8-c0f9-4bf1-aeb0-9c17f79af253"
+            />
+            <label for="fname">Nom prénom</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Votre Nom et prénom"
+            />
 
+            <label for="sujet">Objet</label>
+            <input
+              type="text"
+              id="sujet"
+              name="sujet"
+              placeholder="L'objet de votre message"
+            />
 
-
-
-        </section>
-
-
-        <section id="section-3">
-
-            <div id="formulaire">
-            
-                <h6>Devis gratuit</h6>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="74e9e3a8-c0f9-4bf1-aeb0-9c17f79af253">
-                        <label for="fname">Nom prénom</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Votre Nom et prénom">
-                        
-                        <label for="sujet">Objet</label>
-                        <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
-                        
-               
-                   
-                        <label for="emailAddress">Email</label>
-                        <input id="emailAddress" type="email" name="email" placeholder="Votre email"> 
-                        <label for="subject">Message</label>
-                        <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
-                        <input type="submit" value="Envoyer">                   
-                  
-                </form>   
-            </div>
-
-        </section>
-        
+            <label for="emailAddress">Email</label>
+            <input
+              id="emailAddress"
+              type="email"
+              name="email"
+              placeholder="Votre email"
+            />
+            <label for="subject">Message</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Votre message"
+              style="height: 200px"
+            ></textarea>
+            <input type="submit" value="Envoyer" />
+          </form>
+        </div>
+      </section>
     </main>
 
-    <div id="page">
+    <div id="page"></div>
 
-       
-
-       
-
-
-
-      
-
-        
-        
-    </div>
-
-    <script src="app.js"></script>
-</body>
+  </body>
+  <script src="app.js"></script>
 </html>
