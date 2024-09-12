@@ -5,7 +5,11 @@ Ce projet est un site web pour un électricien professionnel, conçu pour prése
 Fonctionnalités
 
 Présentation des services : Détail des services offerts par l'électricien (domotique, vidéosurveillance, mise en conformité, etc.).
+
 Formulaire de contact : Les clients peuvent facilement soumettre des demandes de devis ou poser des questions via un formulaire dédié.
+
 Portfolio de réalisations : Showcase des projets réalisés avec photos et descriptions.
+
 Responsive Design : Le site s'adapte aux écrans de toutes tailles (mobile, tablette, bureau).
+
 Optimisation SEO : Balises et structure optimisées pour le référencement naturel.
