@@ -140,7 +140,7 @@ a.CTA {
 }
 
 .accordion-label i {
-  padding: 20px;
+  padding: 15px;
   font-size: 40px;
 }
 
@@ -176,7 +176,7 @@ a.CTA {
 
 .accordion input:checked + .accordion-label + .accordion-content {
   max-height: 250px;
-  padding: 20px 30px;
+  padding: 15px 15px;
   transition: 0.8s ease;
   background-color: #000000;
 }
@@ -343,7 +343,9 @@ input[type="submit"]:hover {
     font-size: 30px;
   }
 
-
+  .accordion {
+    margin: 0px auto;
+  }
 
   .accordion-label i {
     padding: 20px;
