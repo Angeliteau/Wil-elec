@@ -101,20 +101,6 @@ a.CTA {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-/*.scroll {
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 30px;
-  gap: 10px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.scroll i {
-  padding-top: 10px;
-}*/
-
 #section-2 {
   background-image: url(../images/frames-for-your-heart-iOLHAIaxpDA-unsplash.jpg);
   background-size: cover;
@@ -192,6 +178,7 @@ a.CTA {
   max-height: 250px;
   padding: 20px 30px;
   transition: 0.8s ease;
+  background-color: #000000;
 }
 
 .accordion input:checked + .accordion-label .plus-sign {
@@ -344,17 +331,19 @@ input[type="submit"]:hover {
     justify-content: center;
   }
 
-  .titre h6 {
+  #section-2 {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .services {
     background-color: #ffcc00;
     border-radius: 10px;
     padding: 10px 20px;
-    margin: 50px;
+    margin: 50px 30px;
     font-size: 30px;
   }
 
-  #section-2 {
-    padding: 0px 40px 0px 40px;
-  }
+
 
   .accordion-label i {
     padding: 20px;
