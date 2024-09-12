@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
 * {
   margin: 0;
   padding: 0;
@@ -124,7 +123,6 @@ a.CTA {
   padding: 0px 150px 0px 150px;
 }
 
-
 .services {
   color: #006991;
   font-weight: 600;
@@ -132,7 +130,6 @@ a.CTA {
   text-align: center;
   padding: 60px 0px 60px 0px;
 }
-
 
 .accordion {
   width: 100%;
@@ -178,7 +175,7 @@ a.CTA {
 .plus-sign {
   font-size: 18px;
   transition: transform 0.4s ease;
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 .accordion-content {
@@ -192,9 +189,8 @@ a.CTA {
   transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
-
 .accordion input:checked + .accordion-label + .accordion-content {
-  max-height: 250px; 
+  max-height: 250px;
   padding: 20px 30px;
   transition: max-height 0.6s ease, padding 0.6s ease;
 }
@@ -202,18 +198,6 @@ a.CTA {
 .accordion input:checked + .accordion-label .plus-sign {
   transform: rotate(45deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 #formulaire {
   display: flex;
@@ -283,30 +267,6 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and ((min-width: 769px) and (max-width: 1024px)) {
   .navbar a.link {
@@ -401,12 +361,12 @@ input[type="submit"]:hover {
     padding: 20px;
     font-size: 30px;
   }
-  
+
   .accordion-label h3 {
     font-size: 20px;
     font-weight: 500;
   }
-  
+
   .accordion-content {
     font-size: 16px;
   }
