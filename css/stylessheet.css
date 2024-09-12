@@ -175,7 +175,7 @@ a.CTA {
 }
 
 .accordion input:checked + .accordion-label + .accordion-content {
-  max-height: 180px;
+  max-height: 200px;
   padding: 0px 15px;
   transition: 0.8s ease;
   background-color: #000000;
