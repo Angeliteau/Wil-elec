@@ -186,13 +186,12 @@ a.CTA {
   overflow: hidden;
   color: #e0e4e4;
   background-color: #0000009f;
-  transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 .accordion input:checked + .accordion-label + .accordion-content {
   max-height: 250px;
   padding: 20px 30px;
-  transition: max-height 0.6s ease, padding 0.6s ease;
+  transition: 0.8s ease;
 }
 
 .accordion input:checked + .accordion-label .plus-sign {
