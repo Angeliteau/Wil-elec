@@ -176,13 +176,17 @@ a.CTA {
 
 .accordion input:checked + .accordion-label + .accordion-content {
   max-height: 200px;
-  padding: 0px 15px;
+  padding: 10px 15px;
   transition: 0.8s ease;
   background-color: #000000;
 }
 
 .accordion input:checked + .accordion-label .plus-sign {
   transform: rotate(45deg);
+}
+
+.accordion input[type="radio"]:checked + label {
+  background-color: #000000;
 }
 
 #formulaire {
