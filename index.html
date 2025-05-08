@@ -22,7 +22,7 @@
   <body>
     <main>
       <section id="section-1">
-        
+
         <img class="Logo-mobile"
         src="images/mpcartewil'elec(2)_cropped_page-0001.png"
         alt="Logo Wil'Elec mobile"
@@ -222,5 +222,26 @@
         </div>
       </section>
     </main>
+    <script>
+      window.addEventListener('scroll', function() {
+        const fixedDiv1 = document.querySelector('.floating-phone');
+        const fixedDiv2 = document.querySelector('.floating-email');
+        const fixedDiv3 = document.querySelector('.floating-insta');
+        const scrollHeight = document.documentElement.scrollHeight;  // Hauteur totale de la page
+        const scrollPosition = window.innerHeight + window.scrollY;  // Position actuelle du bas de la page
+    
+        // Vérifie si on a atteint le bas de la page
+        if (scrollHeight - scrollPosition <= 0) {
+          fixedDiv1.style.display = 'none';  // Masquer la première div si on est en bas
+          fixedDiv2.style.display = 'none';  // Masquer la deuxième div si on est en bas
+          fixedDiv3.style.display = 'none';  // Masquer la troisième div si on est en bas
+        } else {
+          fixedDiv1.style.display = 'block';  // Afficher la première div si on n'est pas en bas
+          fixedDiv2.style.display = 'block';  // Afficher la deuxième div si on n'est pas en bas
+          fixedDiv3.style.display = 'block';  // Afficher la troisième div si on n'est pas en bas
+        }
+      });
+    </script>
+    
   </body>
 </html>
