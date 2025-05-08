@@ -6,7 +6,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-
 #section-1 {
   background-color: #006991;
   background-size: cover;
@@ -22,10 +21,9 @@ header {
 header img {
   height: 60px;
   padding: 20px 50px 20px 50px;
-
 }
 
-.navbar{
+.navbar {
   padding: 20px 50px 20px 50px;
 }
 
@@ -71,7 +69,6 @@ nav a.CTA {
   padding: 0px 0px 0px 50px;
 }
 
-
 h1 {
   color: #e0e4e4;
   font-size: 50px;
@@ -90,16 +87,15 @@ p.domaine {
   display: none;
 }
 
-
 .Contact {
-display: flex;
-position: fixed;
-bottom: 20px;
-right: 20px;
-z-index: 999;
-font-size: 20px;
-font-weight: bold;
-gap: 5px;
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 20px;
+  font-weight: bold;
+  gap: 5px;
 }
 
 .floating-phone {
@@ -109,11 +105,10 @@ gap: 5px;
   border-radius: 8px;
   text-decoration: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  
 }
 
-.floating-phone i{
-padding-right: 10px;
+.floating-phone i {
+  padding-right: 10px;
 }
 
 .floating-email {
@@ -121,26 +116,19 @@ padding-right: 10px;
   color: #006991;
   padding: 10px 10px;
   border-radius: 8px;
-  
 
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   z-index: 999;
 }
 
-
 .floating-insta {
-    background-color: #ffcc00;
-    color: #006991;
-    padding: 10px 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    z-index: 999;
+  background-color: #ffcc00;
+  color: #006991;
+  padding: 10px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
 }
-
-
-
-
-
 
 #section-2 {
   background-color: #e0e4e4;
@@ -148,7 +136,7 @@ padding-right: 10px;
   padding: 0px 0px 0px 0px;
 }
 
-#section-2 h6{
+#section-2 h6 {
   color: #006991;
   font-weight: 600;
   text-align: center;
@@ -158,7 +146,7 @@ padding-right: 10px;
 
 .wrap-services {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 50px 100px 220px 100px;
@@ -166,18 +154,14 @@ padding-right: 10px;
 
 .wrap-services > div {
   padding: 30px 0px;
-  flex: 1 1 calc(33.333% - 20px); 
+  flex: 1 1 calc(33.333% - 20px);
   max-width: calc(33.333% - 20px);
   text-align: center;
   animation: appear linear;
   animation-timeline: view();
   animation-range-start: cover 0%;
-  animation-range-end: contain 50%; 
-
+  animation-range-end: contain 50%;
 }
-
-
-
 
 .wrap-services > div > .title {
   font-weight: 500;
@@ -207,14 +191,14 @@ padding-right: 10px;
 }
 
 .ZI {
-display: flex;
-gap: 20px;
-padding: 60px 0px 200px 0px;
-align-items: center;
-animation: appear linear;
-animation-timeline: view();
-animation-range-start: cover 0%;
-animation-range-end: contain 50%; 
+  display: flex;
+  gap: 20px;
+  padding: 60px 0px 200px 0px;
+  align-items: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range-start: cover 0%;
+  animation-range-end: contain 50%;
 }
 
 .img-wrapper {
@@ -231,13 +215,14 @@ animation-range-end: contain 50%;
   padding-bottom: 20px;
 }
 
-
 .MEL {
-  color: #E4BFFF;
-  font-weight: 600;}
+  color: #e4bfff;
+  font-weight: 600;
+}
 .PVL {
-  color: #74C3B0;
-  font-weight: 600;}
+  color: #74c3b0;
+  font-weight: 600;
+}
 .liste-ville {
   columns: 3;
   list-style-type: disc;
@@ -248,10 +233,6 @@ animation-range-end: contain 50%;
   padding-right: 10px;
 }
 
-
-
-
-
 #section-5 h6 {
   color: #006991;
   font-weight: 600;
@@ -259,41 +240,6 @@ animation-range-end: contain 50%;
   text-align: center;
   padding: 60px 0px 60px 0px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #formulaire {
   display: flex;
@@ -305,7 +251,6 @@ animation-range-end: contain 50%;
   font-size: 20px;
   max-width: 500px;
 }
-
 
 input[type="text"],
 textarea,
@@ -370,7 +315,7 @@ input[type="submit"]:hover {
   .navbar a.link {
     display: none;
   }
-  
+
   .Villes {
     display: none;
   }
@@ -382,14 +327,10 @@ input[type="submit"]:hover {
     padding: 30px 0px 100px 0px;
     text-align: center;
     font-size: 22px;
-    }
-
-
+  }
 }
 
 @media screen and ((min-width: 769px) and (max-width: 1024px)) {
-
-
   #section-1 {
     padding: 0px 20px 20px 20px;
   }
@@ -401,7 +342,7 @@ input[type="submit"]:hover {
   h1 {
     padding-top: 30px;
   }
- 
+
   p.domaine {
     border-radius: 10px;
     padding: 20px 0px;
@@ -419,52 +360,40 @@ input[type="submit"]:hover {
     font-size: 22px;
   }
 
-
-
-
   #section-2 {
     padding: 0px 20px 0px 20px;
   }
 
-
-  #section-2 h6{
+  #section-2 h6 {
     padding: 30px 0px 0px 0px;
   }
 
-  
+  #section-4 {
+    padding: 0px 40px 0px 40px;
+    font-size: 18px;
+  }
 
+  #section-4 h6 {
+    padding: 40px 0px 00px 0px;
+  }
 
+  .ZI {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 0px 100px 0px;
+    text-align: center;
+    font-size: 22px;
+  }
 
-  
-#section-4 {
-  padding: 0px 40px 0px 40px;
-  font-size: 18px;
-}
+  .text-ZI {
+    padding: 20px 20px 40px 20px;
+  }
 
-#section-4 h6 {
-  padding: 40px 0px 00px 0px;
-}
-
-.ZI {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
-padding: 30px 0px 100px 0px;
-text-align: center;
-font-size: 22px;
-}
-
-.text-ZI {
-  padding: 20px 20px 40px 20px;
-}
-
-.Villes {
-  display: none;
-}
-  
- 
-
+  .Villes {
+    display: none;
+  }
 
   #formulaire {
     margin: 40px 20px 0px 20px;
@@ -472,7 +401,6 @@ font-size: 22px;
 }
 
 @media screen and (max-width: 768px) {
-
   header {
     display: none;
   }
@@ -488,7 +416,7 @@ font-size: 22px;
     gap: 5px;
     width: 100%;
     padding: 20px 0px;
-    }
+  }
 
   .floating-phone {
     order: 3;
@@ -498,27 +426,19 @@ font-size: 22px;
   }
   .floating-insta {
     order: 4;
-  
   }
 
- 
+  .landing-page {
+    padding: 80px 10px 0px 10px;
+    text-align: center;
+    order: 2;
+  }
 
-
-
-
-.landing-page {
-  padding: 80px 10px 0px 10px;
-  text-align: center;
-  order: 2;
-}
-
-.Logo-mobile {
-  display:inline;
-  height: 40px;
-  padding: 10px; 
-
-}
-
+  .Logo-mobile {
+    display: inline;
+    height: 40px;
+    padding: 10px;
+  }
 
   h1 {
     font-size: 26px;
@@ -528,17 +448,14 @@ font-size: 22px;
     display: none;
   }
 
-
-
   p.domaine {
     padding: 30px 0px;
     font-size: 20px;
     border-radius: 10px;
   }
 
-
   #section-2 {
-    padding: 0px 5px 20px 5px;
+    padding: 0px 10px 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -561,73 +478,46 @@ font-size: 22px;
     font-size: 30px;
   }
 
-
-
   .wrap-services {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0px;
     padding: 0px;
   }
-  
+
   .wrap-services > div {
     padding: 20px 0px;
-    flex: 1 1 calc(100%); 
-    max-width: calc(100%); 
-  
+    flex: 1 1 calc(100%);
+    max-width: calc(100%);
   }
 
   .wrap-services > div > .title {
     font-size: 16px;
   }
 
-  
-  
-  
-#section-4 {
-  padding: 0px 40px 0px 40px;
-  font-size: 18px;
-}
+  #section-4 {
+    padding: 0px 40px 0px 40px;
+    font-size: 18px;
+  }
 
-.ZI {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
-padding: 30px 0px 100px 0px;
-text-align: center;
-font-size: 22px;
-}
+  .ZI {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 0px 100px 0px;
+    text-align: center;
+    font-size: 22px;
+  }
 
-.text-ZI {
-  padding: 20px 20px 40px 20px;
-}
+  .text-ZI {
+    padding: 20px 20px 40px 20px;
+  }
 
-.Villes {
-  display: none;
-}
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .Villes {
+    display: none;
+  }
 
   #formulaire {
     margin: 0px 20px 0px 20px;
@@ -644,7 +534,6 @@ font-size: 22px;
     margin-bottom: 20px;
   }
 }
-
 
 @keyframes appear {
   from {
