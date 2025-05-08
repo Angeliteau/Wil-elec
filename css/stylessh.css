@@ -480,15 +480,11 @@ font-size: 22px;
   .Contact {
     background-color: #006891;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     position: fixed;
     bottom: auto;
     right: auto;
     z-index: 999;
-    font-size: 20px;
-    font-weight: bold;
     gap: 5px;
     width: 100%;
     padding: 20px 0px;
