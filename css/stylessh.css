@@ -498,7 +498,7 @@ input[type="submit"]:hover {
   }
 
   #section-4 {
-    padding: 0px 40px 0px 40px;
+    padding: 0px 30px 0px 30px;
     font-size: 18px;
   }
 
@@ -535,6 +535,7 @@ input[type="submit"]:hover {
     margin-bottom: 20px;
   }
 }
+
 
 @keyframes appear {
   from {
