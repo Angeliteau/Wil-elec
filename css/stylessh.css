@@ -142,6 +142,28 @@ padding-right: 10px;
 }
 
 
+.floating-fade {
+  transition: opacity 0.3s ease;
+}
+
+.hidden-fade {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.visible-fade {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+
+
+
+
+
 
 
 #section-2 {

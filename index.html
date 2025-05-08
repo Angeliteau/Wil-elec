@@ -222,25 +222,32 @@
         </div>
       </section>
     </main>
+
+
+    
     <script>
       if (window.innerWidth < 769) {
-        window.addEventListener('scroll', function() {
-          const fixedDiv1 = document.querySelector('.floating-phone');
-          const fixedDiv2 = document.querySelector('.floating-email');
-          const fixedDiv3 = document.querySelector('.floating-insta');
-          const scrollHeight = document.documentElement.scrollHeight;
-          const scrollPosition = window.innerHeight + window.scrollY;
+        window.addEventListener('DOMContentLoaded', () => {
+          const elements = document.querySelectorAll('.floating-phone, .floating-email, .floating-insta');
+          elements.forEach(el => {
+            el.classList.add('floating-fade', 'visible-fade');
+          });
     
-          // Lorsque l'utilisateur atteint le bas de la page, on cache les éléments flottants
-          if (scrollHeight - scrollPosition <= 0) {
-            fixedDiv1.style.display = 'none';
-            fixedDiv2.style.display = 'none';
-            fixedDiv3.style.display = 'none';
-          } else {
-            fixedDiv1.style.display = 'block';
-            fixedDiv2.style.display = 'block';
-            fixedDiv3.style.display = 'block';
-          }
+          window.addEventListener('scroll', function() {
+            const scrollHeight = document.documentElement.scrollHeight;
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const atBottom = (scrollHeight - scrollPosition <= 0);
+    
+            elements.forEach(el => {
+              if (atBottom) {
+                el.classList.remove('visible-fade');
+                el.classList.add('hidden-fade');
+              } else {
+                el.classList.remove('hidden-fade');
+                el.classList.add('visible-fade');
+              }
+            });
+          });
         });
       }
     </script>
