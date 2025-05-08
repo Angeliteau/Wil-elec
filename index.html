@@ -23,21 +23,18 @@
     <main>
       <section id="section-1">
 
-        <img class="Logo-mobile"
-        src="images/mpcartewil'elec(2)_cropped_page-0001.png"
-        alt="Logo Wil'Elec mobile"
-      />
-    <a href="tel:0769243613" class="floating-phone"><i class="fa-solid fa-phone"></i>07 69 24 36 13</a>
-    <a href="mailto:wilelec@free.fr" class="floating-email"><i class="fa-solid fa-envelope fa-xl"></i></a>
-    <a href="https://www.instagram.com/willywacquier/" class="floating-insta"><i class="fa-brands fa-instagram fa-2xl" style="color: #006991;"></i></a>
+        <img class="Logo-mobile" src="images/mpcartewil'elec(2)_cropped_page-0001.png" alt="Logo Wil'Elec mobile"/>
 
+          <div class="Contact">
+
+            <a href="https://www.instagram.com/willywacquier/" class="floating-insta"><i class="fa-brands fa-instagram fa-2xl" style="color: #006991;"></i></a>
+            <a href="mailto:wilelec@free.fr" class="floating-email"><i class="fa-solid fa-envelope fa-xl"></i></a>
+            <a href="tel:0769243613" class="floating-phone"><i class="fa-solid fa-phone"></i>07 69 24 36 13</a>
+            
+          </div>
 
         <header>
-          <img
-            src="images/mpcartewil'elec(2)_cropped_page-0001.png"
-            alt="Logo Wil'Elec"
-          />
-
+          <img src="images/mpcartewil'elec(2)_cropped_page-0001.png" alt="Logo Wil'Elec"/>
           <nav class="navbar">
             <a href="#section-2" class="link">Mes services</a>
             <a href="#section-4" class="link">Zone d'intervention</a>
@@ -224,33 +221,6 @@
     </main>
 
 
-    
-    <script>
-      if (window.innerWidth < 769) {
-        window.addEventListener('DOMContentLoaded', () => {
-          const elements = document.querySelectorAll('.floating-phone, .floating-email, .floating-insta');
-          elements.forEach(el => {
-            el.classList.add('floating-fade', 'visible-fade');
-          });
-    
-          window.addEventListener('scroll', function() {
-            const scrollHeight = document.documentElement.scrollHeight;
-            const scrollPosition = window.innerHeight + window.scrollY;
-            const atBottom = (scrollHeight - scrollPosition <= 0);
-    
-            elements.forEach(el => {
-              if (atBottom) {
-                el.classList.remove('visible-fade');
-                el.classList.add('hidden-fade');
-              } else {
-                el.classList.remove('hidden-fade');
-                el.classList.add('visible-fade');
-              }
-            });
-          });
-        });
-      }
-    </script>
     
     
   </body>
