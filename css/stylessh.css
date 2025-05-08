@@ -6,28 +6,28 @@
   font-family: "Poppins", sans-serif;
 }
 
-main {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
 
-main > section {
+#section-1 {
+  background-color: #006991;
+  background-size: cover;
   height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 100px 0px 100px;
-  background-color: #000000;
+  background-color: #006891;
 }
 
 header img {
   height: 60px;
+  padding: 20px 50px 20px 50px;
+
+}
+
+.navbar{
+  padding: 20px 50px 20px 50px;
 }
 
 .navbar a.link {
@@ -61,7 +61,7 @@ nav a.CTA {
   text-decoration: none;
   margin-left: 40px;
   font-weight: 800;
-  background-color: #ffcc00;
+  background-color: #e0e4e4;
   padding: 10px 20px;
   color: #006991;
   border-radius: 5px;
@@ -69,15 +69,14 @@ nav a.CTA {
 }
 
 .landing-page {
-  background-image: url(../images/jakub-zerdzicki-e9Zzio1Tm-8-unsplash.jpg);
-  background-size: cover;
-  height: 100vh;
+  padding: 0px 0px 0px 50px;
 }
+
 
 h1 {
   color: #e0e4e4;
   font-size: 50px;
-  padding: 150px 0px 20px 100px;
+  padding: 100px 0px 20px 0px;
 }
 
 p.domaine {
@@ -85,31 +84,178 @@ p.domaine {
   font-style: italic;
   color: #e0e4e4;
   font-size: 30px;
-  margin: 0px 200px 40px 100px;
+  padding: 0px 0px 100px 0px;
 }
 
-a.CTA {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-  margin-left: 100px;
-  font-weight: 800;
-  background-color: #ffcc00;
-  padding: 10px 20px;
-  color: #006991;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.Logo-mobile {
+  display: none;
 }
+
+.floating-phone {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffcc00;
+  color: #006991;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.floating-phone i{
+padding-right: 10px;
+}
+
+.floating-email {
+  position: fixed;
+  bottom: 20px;
+  right: 220px;
+  background-color: #ffcc00;
+  color: #006991;
+  padding: 10px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+
+.floating-insta {
+    position: fixed;
+    bottom: 20px;
+    right: 276px;
+    background-color: #ffcc00;
+    color: #006991;
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+
+
 
 #section-2 {
-  background-image: url(../images/frames-for-your-heart-iOLHAIaxpDA-unsplash.jpg);
+  background-color: #e0e4e4;
+  background-size: cover;
+  padding: 0px 0px 0px 0px;
+}
+
+#section-2 h6{
+  color: #006991;
+  font-weight: 600;
+  text-align: center;
+  font-size: 40px;
+  padding: 60px 0px 0px 0px;
+}
+
+.wrap-services {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 100px 220px 100px;
+}
+
+.wrap-services > div {
+  padding: 30px 0px;
+  flex: 1 1 calc(33.333% - 20px); 
+  max-width: calc(33.333% - 20px);
+  text-align: center;
+  font-size: 18px; 
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range-start: cover 0%;
+  animation-range-end: contain 50%; 
+
+}
+
+
+
+
+.wrap-services > div > .title {
+  font-weight: 500;
+  padding: 20px 0px 10px 0px;
+  font-size: 20px;
+}
+
+.wrap-services > div > p {
+  padding: 0px 20px;
+}
+
+#section-4 {
+  background-color: #006991;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  padding: 0px 150px 0px 150px;
+  padding: 0px 100px 0px 100px;
+  color: #e0e4e4;
+  font-size: 22px;
 }
 
-.services {
+#section-4 h6 {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  padding: 60px 0px 00px 0px;
+}
+
+.ZI {
+display: flex;
+gap: 20px;
+padding: 60px 0px 200px 0px;
+align-items: center;
+animation: appear linear;
+animation-timeline: view();
+animation-range-start: cover 0%;
+animation-range-end: contain 50%; 
+}
+
+.img-wrapper {
+  width: 600px;
+}
+
+.img-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Villes p {
+  padding-bottom: 20px;
+}
+
+
+.MEL {
+  color: #E4BFFF;
+  font-weight: 600;}
+.PVL {
+  color: #74C3B0;
+  font-weight: 600;}
+.liste-ville {
+  columns: 3;
+  list-style-type: disc;
+  font-size: 20px;
+  padding-left: 23px;
+}
+.liste-ville li {
+  padding-right: 10px;
+}
+
+
+
+
+
+#section-5 h6 {
   color: #006991;
   font-weight: 600;
   font-size: 40px;
@@ -117,77 +263,40 @@ a.CTA {
   padding: 60px 0px 60px 0px;
 }
 
-.accordion {
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-}
 
-.accordion input {
-  display: none;
-}
 
-.accordion-label {
-  display: flex;
-  align-items: center;
-  background-color: #0000009f;
-  color: white;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
 
-.accordion-label i {
-  padding: 15px;
-  font-size: 40px;
-}
 
-.accordion-label h3 {
-  font-size: 26px;
-  font-weight: 500;
-}
 
-.accordion-label span {
-  padding: 15px;
-  font-size: 30px;
-}
 
-.accordion-label:hover {
-  background-color: #000000;
-}
 
-.plus-sign {
-  font-size: 18px;
-  transition: transform 0.4s ease;
-  margin-left: auto;
-}
 
-.accordion-content {
-  font-size: 20px;
-  text-align: justify;
-  font-weight: 400;
-  max-height: 0;
-  overflow: hidden;
-  color: #e0e4e4;
-  background-color: #0000009f;
-}
 
-.accordion input:checked + .accordion-label + .accordion-content {
-  max-height: 200px;
-  padding: 10px 15px;
-  transition: 0.8s ease;
-  background-color: #000000;
-}
 
-.accordion input:checked + .accordion-label .plus-sign {
-  transform: rotate(45deg);
-}
 
-.accordion input[type="radio"]:checked + label {
-  background-color: #000000;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #formulaire {
   display: flex;
@@ -199,6 +308,7 @@ a.CTA {
   font-size: 20px;
   max-width: 500px;
 }
+
 
 input[type="text"],
 textarea,
@@ -256,39 +366,119 @@ input[type="submit"]:hover {
   background-position: left;
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
-@media screen and ((min-width: 769px) and (max-width: 1024px)) {
+@media screen and ((min-width: 1025px) and (max-width: 1260px)) {
   .navbar a.link {
     display: none;
   }
-  h1 {
-    padding: 150px 80px 0px 80px;
-  }
-  br {
+  
+  .Villes {
     display: none;
   }
-  header {
-    padding: 20px 40px;
+  .ZI {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 0px 100px 0px;
+    text-align: center;
+    font-size: 22px;
+    }
+
+
+}
+
+@media screen and ((min-width: 769px) and (max-width: 1024px)) {
+
+
+  #section-1 {
+    padding: 0px 20px 20px 20px;
   }
+
+  .landing-page {
+    padding: 0px 50px;
+  }
+
+  h1 {
+    padding-top: 30px;
+  }
+ 
   p.domaine {
-    margin: 30px 80px 50px 80px;
-    background-color: #00000091;
     border-radius: 10px;
-    padding: 20px 20px;
+    padding: 20px 0px;
     font-size: 26px;
   }
-  .landing-page {
-    background-position: top;
+
+  .navbar {
+    padding: 0px 50px 0px 0px;
   }
+  .navbar a.link {
+    display: none;
+  }
+
   a.CTA {
-    margin-left: 80px;
     font-size: 22px;
   }
 
+
+
+
   #section-2 {
-    padding: 0px 100px 0px 100px;
+    padding: 0px 20px 0px 20px;
   }
+
+
+  #section-2 h6{
+    padding: 30px 0px 0px 0px;
+  }
+  
+  .wrap-services {
+    gap: 10px;
+    padding: 20px 0px 20px 0px;
+  }
+  
+  .wrap-services > div {
+    padding: 20px 0px;
+    font-size: 20px;  
+  
+  }
+  
+  
+
+
+
+  
+#section-4 {
+  padding: 0px 40px 0px 40px;
+  font-size: 18px;
+}
+
+#section-4 h6 {
+  padding: 40px 0px 00px 0px;
+}
+
+.ZI {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+padding: 30px 0px 100px 0px;
+text-align: center;
+font-size: 22px;
+}
+
+.text-ZI {
+  padding: 20px 20px 40px 20px;
+}
+
+.Villes {
+  display: none;
+}
+  
+ 
+
 
   #formulaire {
     margin: 40px 20px 0px 20px;
@@ -296,74 +486,126 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar a.link {
+
+  header {
     display: none;
   }
+
+  .Logo-mobile {
+    display:block;
+    height: 80px; 
+    padding: 20px 0px;
+    margin: auto;
+ }
+
+
+
+.landing-page {
+  padding: 0px 20px 0px 20px;
+  text-align: center;
+}
+
+
+
   h1 {
     font-size: 30px;
-    padding: 50px 20px 0px 20px;
+    padding: 0px 0px 0px 0px;
   }
   br {
     display: none;
   }
-  header {
-    padding: 20px 10px;
-  }
 
-  header img {
-    height: 40px;
-  }
+
 
   p.domaine {
-    margin: 50px 20px 100px 20px;
-    padding: 10px;
+    padding: 20px 20px 40px 20px;
     font-size: 20px;
-    background-color: #000000b2;
     border-radius: 10px;
   }
-  .landing-page {
-    background-position: top;
-    text-align: center;
-  }
-  a.CTA {
-    margin-left: 0px;
-    font-size: 18px;
-  }
 
-  .titre {
+
+  #section-2 {
+    padding: 0px 5px 20px 5px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 
-  #section-2 {
-    padding: 0px 20px 0px 20px;
-  }
-
-  .services {
-    background-color: #ffcc00;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 50px 30px;
+  #section-2 h6 {
+    padding: 30px;
     font-size: 30px;
   }
 
-  .accordion {
-    margin: 0px auto;
-  }
+  
 
-  .accordion-label i {
-    padding: 10px 20px;
-    font-size: 30px;
-  }
 
-  .accordion-label h3 {
-    font-size: 20px;
-    font-weight: 500;
-  }
 
-  .accordion-content {
-    font-size: 16px;
+  .wrap-services {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 0px;
+    padding: 0px;
   }
+  
+  .wrap-services > div {
+    padding: 20px 0px;
+    flex: 1 1 calc(100%); 
+    max-width: calc(100%); 
+  
+  }
+  
+  
+  
+  
+  
+#section-4 {
+  padding: 0px 40px 0px 40px;
+  font-size: 18px;
+}
+
+#section-4 h6 {
+  padding: 40px 0px 00px 0px;
+}
+
+.ZI {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+padding: 30px 0px 100px 0px;
+text-align: center;
+font-size: 22px;
+}
+
+.text-ZI {
+  padding: 20px 20px 40px 20px;
+}
+
+.Villes {
+  display: none;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   #formulaire {
     margin: 40px 20px 0px 20px;
@@ -378,5 +620,17 @@ input[type="submit"]:hover {
   #formulaire h6 {
     font-size: 30px;
     margin-bottom: 20px;
+  }
+}
+
+
+@keyframes appear {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
