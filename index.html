@@ -223,25 +223,28 @@
       </section>
     </main>
     <script>
-      window.addEventListener('scroll', function() {
-        const fixedDiv1 = document.querySelector('.floating-phone');
-        const fixedDiv2 = document.querySelector('.floating-email');
-        const fixedDiv3 = document.querySelector('.floating-insta');
-        const scrollHeight = document.documentElement.scrollHeight;  // Hauteur totale de la page
-        const scrollPosition = window.innerHeight + window.scrollY;  // Position actuelle du bas de la page
+      if (window.innerWidth < 769) {
+        window.addEventListener('scroll', function() {
+          const fixedDiv1 = document.querySelector('.floating-phone');
+          const fixedDiv2 = document.querySelector('.floating-email');
+          const fixedDiv3 = document.querySelector('.floating-insta');
+          const scrollHeight = document.documentElement.scrollHeight;
+          const scrollPosition = window.innerHeight + window.scrollY;
     
-        // Vérifie si on a atteint le bas de la page
-        if (scrollHeight - scrollPosition <= 0) {
-          fixedDiv1.style.display = 'none';  // Masquer la première div si on est en bas
-          fixedDiv2.style.display = 'none';  // Masquer la deuxième div si on est en bas
-          fixedDiv3.style.display = 'none';  // Masquer la troisième div si on est en bas
-        } else {
-          fixedDiv1.style.display = 'block';  // Afficher la première div si on n'est pas en bas
-          fixedDiv2.style.display = 'block';  // Afficher la deuxième div si on n'est pas en bas
-          fixedDiv3.style.display = 'block';  // Afficher la troisième div si on n'est pas en bas
-        }
-      });
+          // Lorsque l'utilisateur atteint le bas de la page, on cache les éléments flottants
+          if (scrollHeight - scrollPosition <= 0) {
+            fixedDiv1.style.display = 'none';
+            fixedDiv2.style.display = 'none';
+            fixedDiv3.style.display = 'none';
+          } else {
+            fixedDiv1.style.display = 'block';
+            fixedDiv2.style.display = 'block';
+            fixedDiv3.style.display = 'block';
+          }
+        });
+      }
     </script>
+    
     
   </body>
 </html>
