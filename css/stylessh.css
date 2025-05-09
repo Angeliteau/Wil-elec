@@ -159,10 +159,6 @@ h1 {
   flex: 1 1 calc(33.333% - 20px);
   max-width: calc(33.333% - 20px);
   text-align: center;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range-start: cover 0%;
-  animation-range-end: contain 50%;
 }
 
 .wrap-services > div > .title {
@@ -193,10 +189,6 @@ h1 {
   gap: 20px;
   padding: 0px 0px 200px 0px;
   align-items: center;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range-start: cover 0%;
-  animation-range-end: contain 50%;
 }
 
 .img-wrapper {
@@ -519,13 +511,3 @@ input[type="submit"]:hover {
 }
 
 
-@keyframes appear {
-  from {
-    transform: translateY(10%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
