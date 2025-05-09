@@ -1,14 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --color-primary: #006991;
+  --color-secondary: #e0e4e4;
+  --color-accent: #37afee;
+  --color-highlight: #ffcc00;
+  --font-main: "Poppins", sans-serif;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-main);
 }
 
 #landing {
-  background-color: #006991;
+  background-color: var(--color-primary);
   background-size: cover;
   height: 100vh;
 }
@@ -21,18 +29,18 @@ header {
 
 header img {
   height: 100px;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 50px;
 }
 
 .navbar {
-  padding: 20px 50px 20px 50px;
+  padding: 20px 50px;
 }
 
 .navbar a.link {
   position: relative;
   font-size: 18px;
   font-weight: 500;
-  color: #e0e4e4;
+  color: var(--color-secondary);
   text-decoration: none;
   margin-left: 40px;
 }
@@ -41,10 +49,10 @@ header img {
   content: "";
   position: absolute;
   top: 100%;
-  left: 0%;
+  left: 0;
   width: 0;
   height: 2px;
-  background: #e0e4e4;
+  background: var(--color-secondary);
   transition: 0.3s;
 }
 
@@ -57,40 +65,40 @@ nav a.CTA {
   text-decoration: none;
   margin-left: 40px;
   font-weight: 800;
-  background-color: #e0e4e4;
+  background-color: var(--color-secondary);
   padding: 10px 20px;
-  color: #006991;
+  color: var(--color-primary);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 nav a.CTA:hover {
-  background-color: #37afee;
+  background-color: var(--color-accent);
   color: white;
 }
 
 h1 {
-  color: #e0e4e4;
+  color: var(--color-secondary);
   font-size: 50px;
-  padding: 100px 0px 20px 0px;
+  padding: 100px 0 20px;
 }
 
 .intro {
-  padding: 0px 0px 0px 50px;
+  padding-left: 50px;
 }
 
 .intro p {
   display: inline-block;
   text-transform: uppercase;
   font-style: italic;
-  color: #e0e4e4;
+  color: var(--color-secondary);
   font-size: 30px;
   padding: 10px 20px;
-  background-color: #37afee;
+  background-color: var(--color-accent);
   border-radius: 10px;
 }
 
-.Logo-mobile {
+.logo-mobile {
   display: none;
 }
 
@@ -106,16 +114,16 @@ h1 {
 }
 
 .contacts a {
-  background-color: #ffcc00;
-  color: #006991;
-  padding: 10px 10px;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  padding: 10px;
   border-radius: 8px;
   text-decoration: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .floating-phone i {
-  padding: 0px 10px 0px 0px;
+  padding-right: 10px;
 }
 
 .contacts a:hover {
@@ -123,19 +131,19 @@ h1 {
 }
 
 #services {
-  background-color: #e0e4e4;
+  background-color: var(--color-secondary);
 }
 
 h2 {
-  color: #006991;
+  color: var(--color-primary);
   font-weight: 600;
   text-align: center;
   font-size: 40px;
-  padding: 60px 0px;
+  padding: 60px 0;
 }
 
 #zone h2 {
-  color: #e0e4e4;
+  color: var(--color-secondary);
 }
 
 .wrap-services {
@@ -143,11 +151,11 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 50px 100px 100px 100px;
+  padding: 50px 100px 100px;
 }
 
 .wrap-services > div {
-  padding: 30px 0px;
+  padding: 30px 0;
   flex: 1 1 calc(33.333% - 20px);
   max-width: calc(33.333% - 20px);
   text-align: center;
@@ -155,28 +163,28 @@ h2 {
 
 h3 {
   font-weight: 600;
-  padding: 20px 0px 10px 0px;
+  padding: 20px 0 10px;
   font-size: 20px;
 }
 
-.wrap-services > div > p {
-  padding: 0px 20px;
+.wrap-services p {
+  padding: 0 20px;
 }
 
 #zone {
-  background-color: #006991;
+  background-color: var(--color-primary);
   background-size: cover;
   display: flex;
   flex-direction: column;
-  padding: 0px 100px 0px 100px;
-  color: #e0e4e4;
+  padding: 0 100px;
+  color: var(--color-secondary);
   font-size: 22px;
 }
 
 .ZI {
   display: flex;
   gap: 20px;
-  padding: 0px 0px 100px 0px;
+  padding-bottom: 100px;
   align-items: center;
 }
 
@@ -216,14 +224,14 @@ h3 {
 }
 
 #realisations {
-  background-color: #e0e4e4;
+  background-color: var(--color-secondary);
 }
 
 #formulaire {
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
-  color: #000000;
+  color: #000;
   font-weight: 600;
   font-size: 20px;
   max-width: 500px;
@@ -236,15 +244,14 @@ input[type="email"] {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
 }
 
 button[type="submit"] {
-  background-color: #ffcc00;
-  color: #006991;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
@@ -255,8 +262,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #006991;
-  color: #ffcc00;
+  background-color: var(--color-primary);
+  color: var(--color-highlight);
 }
 
 #quote {
@@ -267,7 +274,7 @@ button[type="submit"]:hover {
   justify-content: center;
 }
 
-@media screen and ((min-width: 1025px) and (max-width: 1260px)) {
+@media screen and (min-width: 1025px) and (max-width: 1260px) {
   .navbar a.link {
     display: none;
   }
@@ -277,26 +284,21 @@ button[type="submit"]:hover {
   }
 
   .ZI {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    padding: 30px 0px 100px 0px;
+    padding: 30px 0 100px;
     text-align: center;
     font-size: 22px;
   }
 }
 
-@media screen and ((min-width: 769px) and (max-width: 1024px)) {
- 
-  
-  
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   #landing {
-    padding: 0px 20px 20px 20px;
+    padding: 0 20px 20px;
   }
 
   .intro {
-    padding: 0px 50px;
+    padding: 0 50px;
   }
 
   h1 {
@@ -310,7 +312,7 @@ button[type="submit"]:hover {
   }
 
   .navbar {
-    padding: 0px 50px 0px 0px;
+    padding: 0 50px 0 0;
   }
 
   .navbar a.link {
@@ -322,34 +324,31 @@ button[type="submit"]:hover {
   }
 
   #services {
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px;
   }
 
   h2 {
-    padding: 30px 0px;
+    padding: 30px 0;
   }
 
   .wrap-services {
-    padding: 50px 20px 100px 20px;
+    padding: 50px 20px 100px;
   }
 
   #zone {
-    padding: 0px 40px 0px 40px;
+    padding: 0 40px;
     font-size: 18px;
   }
 
   .ZI {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    padding: 30px 0px 100px 0px;
     text-align: center;
     font-size: 22px;
   }
 
   .text-ZI {
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 40px;
   }
 
   .Villes {
@@ -357,7 +356,7 @@ button[type="submit"]:hover {
   }
 
   #formulaire {
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px;
   }
 }
 
@@ -366,7 +365,7 @@ button[type="submit"]:hover {
     display: none;
   }
 
-  .contacts { 
+  .contacts {
     display: flex;
     justify-content: center;
     position: fixed;
@@ -378,25 +377,25 @@ button[type="submit"]:hover {
     padding: 20px 0px;
   }
 
-  .floating-phone {
+  .contacts a:nth-child(1) {
+    order: 1;
+  }
+
+  .contacts a:nth-child(2) {
     order: 3;
   }
 
-  .floating-email {
+  .contacts a:nth-child(3) {
     order: 2;
   }
 
-  .floating-insta {
-    order: 4;
-  }
-
   .intro {
-    padding: 80px 10px 0px 10px;
+    padding: 80px 10px 0;
     text-align: center;
     order: 2;
   }
 
-  .Logo-mobile {
+  .logo-mobile {
     display: inline;
     height: 80px;
     padding: 10px;
@@ -404,7 +403,7 @@ button[type="submit"]:hover {
 
   h1 {
     font-size: 26px;
-    padding: 0px;
+    padding: 0;
   }
 
   br {
@@ -412,21 +411,21 @@ button[type="submit"]:hover {
   }
 
   .intro p {
-    padding: 10px 10px;
+    padding: 10px;
     font-size: 20px;
     border-radius: 10px;
     margin-top: 20px;
   }
 
   #services {
-    padding: 0px 10px 20px 10px;
+    padding: 0 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
   h2 {
-    padding: 30px 0px;
+    padding: 30px 0;
     font-size: 30px;
   }
 
@@ -434,14 +433,14 @@ button[type="submit"]:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0px;
-    padding: 0px;
+    gap: 0;
+    padding: 0;
   }
 
   .wrap-services > div {
-    padding: 20px 0px;
-    flex: 1 1 calc(100%);
-    max-width: calc(100%);
+    padding: 20px 0;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   h3 {
@@ -449,22 +448,19 @@ button[type="submit"]:hover {
   }
 
   #zone {
-    padding: 0px 30px 0px 30px;
+    padding: 0 30px;
     font-size: 18px;
   }
 
   .ZI {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    padding: 0px 0px 100px 0px;
     text-align: center;
     font-size: 22px;
   }
 
   .text-ZI {
-    padding: 0px 20px 40px 20px;
+    padding: 0 20px 40px;
   }
 
   .Villes {
@@ -472,13 +468,11 @@ button[type="submit"]:hover {
   }
 
   #formulaire {
-    padding: 0px 20px 50px 20px;
+    padding: 0 20px 50px;
   }
 
   button[type="submit"] {
-    padding: 10px 10px;
-    font-weight: 600;
-    font-size: 16px;
+    padding: 10px;
     width: 100%;
   }
 }
