@@ -305,10 +305,6 @@ input[type="submit"]:hover {
   margin-bottom: 40px;
 }
 
-#page {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
 
 #section-3 {
   background-image: url(../images/kyaw-tun-4wQ6Y-jyeME-unsplash.jpg);
@@ -316,7 +312,6 @@ input[type="submit"]:hover {
   background-position: left;
   display: flex;
   justify-content: center;
-  height: 100vh;
 }
 
 @media screen and ((min-width: 1025px) and (max-width: 1260px)) {
