@@ -22,7 +22,7 @@
    <body>
       <main>
          <section id="landing">
-            <div class="Contact">
+            <div class="contacts">
                <a
                   href="https://www.instagram.com/willywacquier/"
                   class="floating-insta"
@@ -44,25 +44,25 @@
                   <a href="#services" class="link">Mes services</a>
                   <a href="#zone" class="link">Zone d'intervention</a>
                   <a href="#realisations" class="link">Réalisations</a>
-                  <a href="#devis" class="CTA">DEMANDEZ UN DEVIS GRATUIT</a>
+                  <a href="#quote" class="CTA">DEMANDEZ UN DEVIS GRATUIT</a>
                </nav>
             </header>
-            <div class="catch-phrase">
+            <div class="intro">
                <img
                   class="Logo-mobile"
                   src="images/mpcartewil'elec(2)_cropped_page-0001.png"
                   alt="Logo Wil'Elec mobile"
                   />
-               <h1 class="big-title">
+               <h1>
                   Spécialisé en Électricité Générale <br />à Lille et Environs
                </h1>
-               <p class="domaine">
+               <p>
                   Domotique - Intrusion - Vidéosurveillance - Dépannage
                </p>
             </div>
          </section>
          <section id="services">
-            <h6>Mes services</h6>
+            <h2>Mes services</h2>
             <div class="wrap-services">
                <div>
                   <i class="fa-solid fa-house fa-2xl" style="color: #006991"></i>
@@ -117,7 +117,7 @@
             </div>
          </section>
          <section id="zone">
-            <h6>Zone d'intervention</h6>
+            <h2>Zone d'intervention</h2>
             <div class="ZI">
                <div class="text-ZI">
                   <p>
@@ -172,14 +172,14 @@
             </div>
          </section>
          <section id="realisations">
-            <h6>Mes réalisations</h6>
+            <h2>Mes réalisations</h2>
 
             
 
          </section>
-         <section id="devis">
+         <section id="quote">
             <div id="formulaire">
-               <h6>Devis gratuit</h6>
+               <h2>Devis gratuit</h2>
                <form action="https://api.web3forms.com/submit" method="POST">
                   <input
                      type="hidden"
@@ -192,6 +192,7 @@
                      id="fname"
                      name="firstname"
                      placeholder="Votre Nom et prénom"
+                     required
                      />
                   <label for="sujet">Objet</label>
                   <input
@@ -199,6 +200,7 @@
                      id="sujet"
                      name="sujet"
                      placeholder="L'objet de votre message"
+                     required
                      />
                   <label for="emailAddress">Email</label>
                   <input
@@ -206,6 +208,7 @@
                      type="email"
                      name="email"
                      placeholder="Votre email"
+                     required
                      />
                   <label for="subject">Message</label>
                   <textarea
@@ -213,64 +216,12 @@
                      name="subject"
                      placeholder="Votre message"
                      style="height: 100px"
+                     required
                      ></textarea>
-                  <input type="submit" value="Envoyer" />
+                  <button type="submit">Envoyer</button>
                </form>
             </div>
          </section>
       </main>
-      <script>
-
-
-                      let sliders = document.querySelectorAll('.slider');
-
-            sliders.forEach(function (slider) {
-              let sliderRange = slider.querySelector('.slider__range');
-              let sliderBefore = slider.querySelector('.slider__before');
-              let sliderSeparator = slider.querySelector('.slider__separator');
-
-              function updateSliderPosition() {
-                sliderBefore.style = `width:${sliderRange.value}%`;
-                sliderSeparator.style = `left:${sliderRange.value}%`;
-              }
-
-              sliderRange.addEventListener('input', updateSliderPosition);
-
-              let isDragging = false;
-
-              sliderSeparator.addEventListener('mousedown', function() {
-                isDragging = true;
-              });
-
-              sliderSeparator.addEventListener('touchstart', function() {
-                  isDragging = true;
-              });
-              document.addEventListener('mouseup', function() {
-                  isDragging = false;
-              });
-              document.addEventListener('touchend', function() {
-                  isDragging = false;
-              });
-
-              document.addEventListener('mousemove', function (e) {
-                processMove(e.clientX);
-              });
-
-              document.addEventListener('touchmove', function (e) {
-                processMove(e.touches[0].clientX);
-              });
-
-              function processMove(x) {
-                  if (isDragging) {
-                      let sliderRect = slider.getBoundingClientRect();
-                      let newWidth = (x - sliderRect.left) /
-                          sliderRect.width * 100;
-                      sliderRange.value = newWidth;
-                      updateSliderPosition();
-                  }
-              }
-            });
-
-      </script>
    </body>
 </html>

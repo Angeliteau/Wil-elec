@@ -3,8 +3,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Poppins", sans-serif;
-}
+  box-sizing: border-box;
+	font-family: "Poppins", sans-serif;}
 
 #landing {
 	background-color: #006991;
@@ -16,11 +16,10 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #006891;
 }
 
 header img {
-	height: 60px;
+	height: 100px;
 	padding: 20px 50px 20px 50px;
 }
 
@@ -35,7 +34,6 @@ header img {
 	color: #e0e4e4;
 	text-decoration: none;
 	margin-left: 40px;
-	width: 0%;
 }
 
 .navbar a.link::before {
@@ -70,17 +68,18 @@ nav a.CTA:hover {
 	color:white;
 }
 
-.catch-phrase {
-	padding: 0px 0px 0px 50px;
-}
 
 h1 {
-	color: #e0e4e4;
+  color: #e0e4e4;
 	font-size: 50px;
 	padding: 100px 0px 20px 0px;
 }
 
-.domaine {
+.intro {
+  padding: 0px 0px 0px 50px;
+}
+
+.intro p {
 	display: inline-block;
 	text-transform: uppercase;
 	font-style: italic;
@@ -95,7 +94,7 @@ h1 {
 	display: none;
 }
 
-.Contact {
+.contacts {
 	display: flex;
 	position: fixed;
 	bottom: 20px;
@@ -106,32 +105,22 @@ h1 {
 	gap: 5px;
 }
 
-.floating-phone {
+
+
+.contacts a {
 	background-color: #ffcc00;
 	color: #006991;
-	padding: 10px 15px;
+	padding: 10px 10px;
 	border-radius: 8px;
 	text-decoration: none;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .floating-phone i {
-	padding-right: 10px;
+	padding: 0px 10px 0px 0px;
 }
 
-.floating-insta,
-.floating-email {
-	background-color: #ffcc00;
-	color: #006991;
-	padding: 10px 10px;
-	border-radius: 8px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-	z-index: 999;
-}
-
-.floating-insta:hover,
-.floating-email:hover,
-.floating-phone:hover {
+.contacts a:hover {
 box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -139,9 +128,7 @@ box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 	background-color: #e0e4e4;
 }
 
-#services h6,
-#devis h6,
-#realisations h6 {
+h2 {
 	color: #006991;
 	font-weight: 600;
 	text-align: center;
@@ -149,12 +136,8 @@ box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 	padding: 60px 0px 60px 0px;
 }
 
-#zone h6 {
+#zone h2 {
 	color: #e0e4e4;
-	font-weight: 600;
-	text-align: center;
-	font-size: 40px;
-	padding: 60px 0px 60px 0px;
 }
 
 .wrap-services {
@@ -234,7 +217,7 @@ box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 	padding-right: 10px;
 }
 
-#realisatoins {
+#realisations {
 	background-color: #e0e4e4;
 }
 
@@ -258,18 +241,10 @@ input[type="email"] {
 	box-sizing: border-box;
 	margin-top: 6px;
 	margin-bottom: 16px;
-	margin-right: 0px;
-	margin-left: 0px;
 	resize: vertical;
 }
 
-label {
-	margin-right: 0px;
-	margin-left: 0px;
-	width: 100%;
-}
-
-input[type="submit"] {
+button[type="submit"] {
 	background-color: #ffcc00;
 	color: #006991;
 	padding: 10px 15px;
@@ -281,12 +256,12 @@ input[type="submit"] {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
 	background-color: #006991;
 	color: #ffcc00;
 }
 
-#devis {
+#quote {
 	background-image: url(../images/kyaw-tun-4wQ6Y-jyeME-unsplash.jpg);
 	background-size: cover;
 	background-position: left;
@@ -319,7 +294,7 @@ input[type="submit"]:hover {
 		padding: 0px 20px 20px 20px;
 	}
 
-	.catch-phrase {
+	.intro {
 		padding: 0px 50px;
 	}
 
@@ -349,7 +324,7 @@ input[type="submit"]:hover {
 		padding: 0px 20px 0px 20px;
 	}
 
-	#services h6 {
+	#services h2 {
 		padding: 30px 0px 0px 0px;
 	}
 
@@ -362,7 +337,7 @@ input[type="submit"]:hover {
 		font-size: 18px;
 	}
 
-	#zone h6 {
+	#zone h2 {
 		padding: 40px 0px 00px 0px;
 	}
 
@@ -385,7 +360,7 @@ input[type="submit"]:hover {
 	}
 
 	#formulaire {
-		margin: 40px 20px 0px 20px;
+		padding: 0px 20px 0px 20px;
 	}
 }
 
@@ -394,7 +369,7 @@ input[type="submit"]:hover {
 		display: none;
 	}
 
-	.Contact {
+	.contacts {
 		background-color: #006891;
 		display: flex;
 		justify-content: center;
@@ -419,7 +394,7 @@ input[type="submit"]:hover {
 		order: 4;
 	}
 
-	.catch-phrase {
+	.intro {
 		padding: 80px 10px 0px 10px;
 		text-align: center;
 		order: 2;
@@ -454,22 +429,22 @@ input[type="submit"]:hover {
 		justify-content: center;
 	}
 
-	#services h6 {
+	#services h2 {
 		padding: 20px 0px;
 		font-size: 30px;
 	}
 
-	#zone h6 {
+	#zone h2 {
 		padding: 20px 0px;
 		font-size: 30px;
 	}
 
-	#zone h6 {
+	#zone h2 {
 		padding: 40px 0px;
 		font-size: 30px;
 	}
 
-	#realisations h6 {
+	#realisations h2 {
 		padding: 50px 0px;
 		font-size: 30px;
 	}
@@ -519,14 +494,14 @@ input[type="submit"]:hover {
 		margin: 0px 20px 50px 20px;
 	}
 
-	input[type="submit"] {
+	button[type="submit"] {
 		padding: 10px 10px;
 		font-weight: 600;
 		font-size: 16px;
 		width: 100%;
 	}
 
-	#formulaire h6 {
+	#formulaire h2 {
 		font-size: 30px;
 		margin-bottom: 20px;
 	}
