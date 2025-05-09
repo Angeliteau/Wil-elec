@@ -288,6 +288,9 @@ button[type="submit"]:hover {
 }
 
 @media screen and ((min-width: 769px) and (max-width: 1024px)) {
+ 
+  
+  
   #landing {
     padding: 0px 20px 20px 20px;
   }
@@ -363,8 +366,7 @@ button[type="submit"]:hover {
     display: none;
   }
 
-  .contacts {
-    background-color: #006891;
+  .contacts { 
     display: flex;
     justify-content: center;
     position: fixed;
