@@ -55,7 +55,6 @@ header img {
 
 nav a.CTA {
 	font-size: 18px;
-	color: #e0e4e4;
 	text-decoration: none;
 	margin-left: 40px;
 	font-weight: 800;
@@ -64,6 +63,11 @@ nav a.CTA {
 	color: #006991;
 	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+nav a.CTA:hover {
+	background-color: #37afee;
+	color:white;
 }
 
 .catch-phrase {
@@ -125,6 +129,12 @@ h1 {
 	z-index: 999;
 }
 
+.floating-insta:hover,
+.floating-email:hover,
+.floating-phone:hover {
+box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
 #services {
 	background-color: #e0e4e4;
 }
@@ -152,7 +162,7 @@ h1 {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 20px;
-	padding: 50px 100px 220px 100px;
+	padding: 50px 100px 100px 100px;
 }
 
 .wrap-services>div {
@@ -185,7 +195,7 @@ h1 {
 .ZI {
 	display: flex;
 	gap: 20px;
-	padding: 0px 0px 200px 0px;
+	padding: 0px 0px 100px 0px;
 	align-items: center;
 }
 
@@ -342,6 +352,10 @@ input[type="submit"]:hover {
 	#services h6 {
 		padding: 30px 0px 0px 0px;
 	}
+
+  .wrap-services {
+	padding: 50px 20px 100px 20px;
+}
 
 	#zone {
 		padding: 0px 40px 0px 40px;
