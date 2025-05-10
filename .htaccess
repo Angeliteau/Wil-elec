@@ -1,0 +1,32 @@
+RewriteEngine On
+
+# Redirige wil-elec.fr vers www.wil-elec.fr
+RewriteCond %{HTTP_HOST} ^wil-elec\.fr$ [NC]
+RewriteRule ^(.*)$ https://www.wil-elec.fr/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+
+
+# (Redirection HTTPS supprimée car OVH la gère déjà)
+
+# Compression Gzip
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# En-têtes de sécurité
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Cache simple
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

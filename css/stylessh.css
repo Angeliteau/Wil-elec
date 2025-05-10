@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('fonts.css');
+
+
 
 :root {
   --color-primary: #006991;
   --color-secondary: #e0e4e4;
   --color-accent: #37afee;
-  --color-highlight: #ffcc00;
+  --color-highlight: #FFDB34;
   --font-main: "Poppins", sans-serif;
 }
 
@@ -212,12 +214,12 @@ h3 {
 }
 
 .MEL {
-  color: #e4bfff;
+  color: #F0DBFF;
   font-weight: 600;
 }
 
 .PVL {
-  color: #74c3b0;
+  color: #99F0DD;
   font-weight: 600;
 }
 
