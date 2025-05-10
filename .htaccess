@@ -32,3 +32,6 @@ RewriteRule ^index\.html$ / [R=301,L]
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
+
+# Force l'encodage UTF-8 dans les headers
+AddDefaultCharset UTF-8
