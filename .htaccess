@@ -1,8 +1,10 @@
 RewriteEngine On
 
 # Redirige wil-elec.fr vers www.wil-elec.fr
-RewriteCond %{HTTP_HOST} ^wil-elec\.fr$ [NC]
-RewriteRule ^(.*)$ https://www.wil-elec.fr/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.wil-elec\.fr$ [NC]
+RewriteRule ^(.*)$ https://wil-elec.fr/$1 [R=301,L]
+
+# Redirige /index.html vers /
 RewriteCond %{THE_REQUEST} \ /index\.html\ HTTP/
 RewriteRule ^index\.html$ / [R=301,L]
 
