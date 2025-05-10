@@ -122,6 +122,15 @@ h1 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+.contacts a img{
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
 .floating-phone i {
   padding-right: 10px;
 }
