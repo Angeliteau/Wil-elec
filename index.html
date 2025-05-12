@@ -175,26 +175,26 @@
   const burgerIcon = document.getElementById("burger-icon");
   const closeIcon = document.getElementById("close-icon");
   const navLinks = document.getElementById("nav-links");
-  closeIcon.style.display = "none";
 
+
+
+  // Clic sur le burger → afficher menu + close, masquer burger
   burgerIcon.addEventListener("click", () => {
     burgerIcon.style.display = "none";
-    closeIcon.style.display = "inline";
-    closeIcon.classList.remove("rotate-out");
-    closeIcon.classList.add("rotate-in");
-    navLinks.classList.add("show");
+    closeIcon.style.display = "inline-block";
+    navLinks.style.display = "flex";
   });
 
+  // Clic sur le close → masquer menu + close, afficher burger
   closeIcon.addEventListener("click", () => {
-    closeIcon.classList.remove("rotate-in");
-    closeIcon.classList.add("rotate-out");
-    setTimeout(() => {
-      closeIcon.style.display = "none";
-      burgerIcon.style.display = "inline";
-    }, 300);
-    navLinks.classList.remove("show");
+    closeIcon.style.display = "none";
+    burgerIcon.style.display = "inline-block";
+    navLinks.style.display = "none";
   });
 </script>
+
+
+
 
 
 
