@@ -46,18 +46,24 @@
           </a>
           <a href="tel:0769243613" class="floating-phone">
             <i class="fa-solid fa-phone"></i>07 69 24 36 13 </a>
-        </div>
-        <header>
-          <img src="images/logo-wilelec.webp" alt="Logo Wil'Elec - Électricien à Lille">
+        </div>  
           <nav class="navbar">
-            <a href="#services" class="link">Mes services</a>
-            <a href="#zone" class="link">Zone d'intervention</a>
-            <a href="#realisations" class="link">Réalisations</a>
-            <a href="#quote" class="CTA">DEMANDEZ UN DEVIS GRATUIT</a>
+            <div class="navbar-logo">
+              <img src="images/logo-wilelec.webp" alt="Logo Wil'Elec - Électricien à Lille">
+            </div>
+            <div class="navbar-link" id="nav-links">
+              <a href="#services" class="link">Mes services</a>
+              <a href="#zone" class="link">Zone d'intervention</a>
+              <a href="#realisations" class="link">Réalisations</a>
+              <a href="#quote" class="CTA">Demandez un devis gratuit</a>
+            </div>
+            <div class="navbar-menu-burger">
+              <i class="fa-solid fa-bars fa-xl" id="burger-icon" style="color: #ffffff;"></i>
+              <i class="fa-solid fa-xmark fa-xl" id="close-icon" style="color: #ffffff;"></i>
+            </div>
           </nav>
-        </header>
+        
         <div class="intro">
-          <img class="logo-mobile" src="images/logo-wilelec.webp" alt="Logo Wil'Elec pour mobile - Électricien à Lille">
           <h1> Spécialisé en Électricité Générale <br>à Lille et Environs </h1>
           <p> Domotique - Intrusion - Vidéosurveillance - Dépannage </p>
         </div>
@@ -162,5 +168,37 @@
         </div>
       </section>
     </main>
+
+
+
+   <script>
+  const burgerIcon = document.getElementById("burger-icon");
+  const closeIcon = document.getElementById("close-icon");
+  const navLinks = document.getElementById("nav-links");
+  closeIcon.style.display = "none";
+
+  burgerIcon.addEventListener("click", () => {
+    burgerIcon.style.display = "none";
+    closeIcon.style.display = "inline";
+    closeIcon.classList.remove("rotate-out");
+    closeIcon.classList.add("rotate-in");
+    navLinks.classList.add("show");
+  });
+
+  closeIcon.addEventListener("click", () => {
+    closeIcon.classList.remove("rotate-in");
+    closeIcon.classList.add("rotate-out");
+    setTimeout(() => {
+      closeIcon.style.display = "none";
+      burgerIcon.style.display = "inline";
+    }, 300);
+    navLinks.classList.remove("show");
+  });
+</script>
+
+
+
+
+
   </body>
 </html>
