@@ -55,7 +55,7 @@
  .link:hover::after {
      width: 100%;
 }
- .CTA {
+ .btn-cta {
      font-size: 18px;
      text-decoration: none;
      font-weight: 800;
@@ -67,11 +67,11 @@
      display: inline-block;
      text-transform: uppercase;
 }
- .CTA:hover {
+ .btn-cta:hover {
      background-color: var(--color-accent);
      color: var(--color-secondary);
 }
- .navbar-menu-burger {
+ .navbar-toggle {
      display: none;
 }
  h1 {
@@ -118,7 +118,7 @@
      text-decoration: none;
      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
- .floating-phone i {
+ .btn-phone i {
      padding-right: 10px;
 }
  .contacts a:hover {
@@ -169,7 +169,7 @@
      color: var(--color-secondary);
      font-size: 22px;
 }
- .ZI {
+ .zi {
      display: flex;
      gap: 20px;
      padding-bottom: 100px;
@@ -183,7 +183,7 @@
      height: auto;
      display: block;
 }
- .Villes p {
+ .villes p {
      padding-bottom: 20px;
 }
  .MEL {
@@ -206,7 +206,7 @@
  #realisations {
      background-color: var(--color-secondary);
 }
- #formulaire {
+ #form-container {
      display: flex;
      flex-direction: column;
      padding-bottom: 50px;
@@ -287,24 +287,24 @@
          padding: 0 40px;
          font-size: 18px;
     }
-     .ZI {
+     .zi {
          flex-wrap: wrap;
          justify-content: center;
          text-align: center;
          font-size: 22px;
     }
-     .text-ZI {
+     .text-zi {
          padding: 20px 20px 40px;
     }
-     .Villes {
+     .villes {
          display: none;
     }
-     #formulaire {
+     #form-container {
          padding: 0px 20px 50px 20px;
     }
 }
  @media screen and (max-width: 768px) {
-     .navbar-menu-burger {
+     .navbar-toggle {
          display:block;
     }
      .navbar-logo img {
@@ -319,10 +319,10 @@
          display: none;
          margin: 20px 40px 0px 20px;
     }
-     .navbar-menu-burger.active #burger-icon {
+     .navbar-toggle.active #burger-icon {
          display: none;
     }
-     .navbar-menu-burger.active #close-icon {
+     .navbar-toggle.active #close-icon {
          display: inline;
     }
      .navbar {
@@ -348,7 +348,7 @@
      .navbar-link.show {
          display: flex;
     }
-     .CTA {
+     .btn-cta {
          font-size: 18px;
          font-weight: 600;
          color: var(--color-primary);
@@ -359,7 +359,7 @@
          padding: 0px;
          text-transform: none;
     }
-     nav a.CTA:hover {
+     nav a.btn-cta:hover {
          background-color: inherit;
          color:var(--color-primary);
     }
@@ -430,20 +430,20 @@
          padding: 0 30px;
          font-size: 18px;
     }
-     .ZI {
+     .zi {
          flex-wrap: wrap;
          justify-content: center;
          text-align: center;
          font-size: 22px;
          padding-bottom: 50px;
     }
-     .text-ZI {
+     .text-zi {
          padding: 0 20px 40px;
     }
-     .Villes {
+     .villes {
          display: none;
     }
-     #formulaire {
+     #form-container {
          padding: 20px 50px 100px 50px;
     }
      button[type="submit"] {
