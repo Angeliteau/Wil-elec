@@ -309,15 +309,15 @@
     }
      .navbar-logo img {
          max-height: 50px;
-         margin: 20px 20px 0px 20px;
+         margin: 20px 0px 0px 40px;
     }
      #burger-icon{
          display: block;
-         margin: 20px 20px 0px 20px;
+         margin: 20px 40px 0px 20px;
     }
      #close-icon{
          display: none;
-         margin: 20px 20px 0px 20px;
+         margin: 20px 40px 0px 20px;
     }
      .navbar-menu-burger.active #burger-icon {
          display: none;
