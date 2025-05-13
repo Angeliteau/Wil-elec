@@ -242,7 +242,7 @@ button[type="submit"]:hover {
   color: var(--color-highlight);
 }
 #quote {
-  background-image: url(../images/lampes-elec.webp);
+  background-image: url(../images/lampes-elec.jpg);
   background-size: cover;
   background-position: left;
   display: flex;
