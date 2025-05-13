@@ -171,27 +171,39 @@
 
 
 
-   <script>
-  const burgerIcon = document.getElementById("burger-icon");
-  const closeIcon = document.getElementById("close-icon");
-  const navLinks = document.getElementById("nav-links");
+            <script>
+            const burgerIcon = document.getElementById("burger-icon");
+            const closeIcon = document.getElementById("close-icon");
+            const navLinks = document.getElementById("nav-links");
 
+            function closeMenu() {
+              closeIcon.style.display = "none";
+              burgerIcon.style.display = "inline-block";
+              burgerIcon.classList.add("slide-in-right"); // Ajout animation
+              navLinks.style.display = "none";
+            }
 
+            // Clic sur le burger → afficher menu + close, masquer burger
+            burgerIcon.addEventListener("click", () => {
+              burgerIcon.style.display = "none";
+              closeIcon.style.display = "inline-block";
+              closeIcon.classList.add("rotate-in");
 
-  // Clic sur le burger → afficher menu + close, masquer burger
-  burgerIcon.addEventListener("click", () => {
-    burgerIcon.style.display = "none";
-    closeIcon.style.display = "inline-block";
-    navLinks.style.display = "flex";
-  });
+              navLinks.style.display = "flex";
+              navLinks.classList.add("slide-down");
+            });
 
-  // Clic sur le close → masquer menu + close, afficher burger
-  closeIcon.addEventListener("click", () => {
-    closeIcon.style.display = "none";
-    burgerIcon.style.display = "inline-block";
-    navLinks.style.display = "none";
-  });
-</script>
+            // Clic sur le close → masquer menu + close, afficher burger
+            closeIcon.addEventListener("click", closeMenu);
+
+            // Clic sur un lien du menu → fermer le menu
+            navLinks.querySelectorAll("a").forEach(link => {
+              link.addEventListener("click", closeMenu);
+            });
+
+            ;
+          </script>
+
 
 
 
