@@ -283,53 +283,76 @@
         </div>
       </section>
     </main>
-    <script>
-  const burgerIcon = document.getElementById("burger-icon");
-  const closeIcon = document.getElementById("close-icon");
-  const navLinks = document.getElementById("nav-links");
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burgerIcon = document.getElementById("burger-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const navLinks = document.getElementById("nav-links");
 
-  function closeMenu() {
-    navLinks.classList.remove("slide-down");
-    navLinks.classList.add("slide-up");
+    let isMobile = window.innerWidth < 1260;
 
-    setTimeout(() => {
-      navLinks.style.display = "none";
-      navLinks.classList.remove("slide-up");
-    }, 400);
+    function closeMenu() {
+      navLinks.classList.remove("slide-down");
+      navLinks.classList.add("slide-up");
 
-    closeIcon.style.display = "none";
-    burgerIcon.style.display = "inline-block";
-    burgerIcon.classList.add("slide-in-right");
-  }
-
-  function initMobileMenu() {
-    if (window.innerWidth < 1260) {
-      burgerIcon.addEventListener("click", () => {
-        burgerIcon.style.display = "none";
-        closeIcon.style.display = "inline-block";
-        closeIcon.classList.add("rotate-in");
-
-        navLinks.style.display = "flex";
+      setTimeout(() => {
+        navLinks.style.display = "none";
         navLinks.classList.remove("slide-up");
-        navLinks.classList.add("slide-down");
-      });
+      }, 400);
 
-      closeIcon.addEventListener("click", closeMenu);
-
-      navLinks.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", closeMenu);
-      });
+      closeIcon.style.display = "none";
+      burgerIcon.style.display = "inline-block";
+      burgerIcon.classList.add("slide-in-right");
     }
-  }
 
-  window.addEventListener("DOMContentLoaded", initMobileMenu);
+    function openMenu() {
+      burgerIcon.style.display = "none";
+      closeIcon.style.display = "inline-block";
+      closeIcon.classList.add("rotate-in");
 
-  window.addEventListener("resize", () => {
-    burgerIcon.replaceWith(burgerIcon.cloneNode(true));
-    closeIcon.replaceWith(closeIcon.cloneNode(true));
-    location.reload();
+      navLinks.style.display = "flex";
+      navLinks.classList.remove("slide-up");
+      navLinks.classList.add("slide-down");
+    }
+
+    function setMenuListeners() {
+      // Supprimer d'abord les anciens pour éviter les doublons
+      burgerIcon.replaceWith(burgerIcon.cloneNode(true));
+      closeIcon.replaceWith(closeIcon.cloneNode(true));
+
+      const newBurger = document.getElementById("burger-icon");
+      const newClose = document.getElementById("close-icon");
+
+      if (isMobile) {
+        newBurger.addEventListener("click", openMenu);
+        newClose.addEventListener("click", closeMenu);
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+      } else {
+        // Reset pour desktop
+        navLinks.style.display = "";
+        navLinks.classList.remove("slide-down", "slide-up");
+        newBurger.style.display = "none";
+        newClose.style.display = "none";
+      }
+    }
+
+    // Initial setup
+    setMenuListeners();
+
+    window.addEventListener("resize", () => {
+      const wasMobile = isMobile;
+      isMobile = window.innerWidth < 1260;
+
+      if (wasMobile !== isMobile) {
+        setMenuListeners(); // Re-initialiser si le mode a changé
+      }
+    });
   });
 </script>
+
 
   </body>
 </html>
