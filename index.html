@@ -64,6 +64,7 @@
         <div class="navbar-link" id="nav-links">
           <a href="#services" class="link">Mes services</a>
           <a href="#zone" class="link">Zone d'intervention</a>
+          <a href="#A_propos" class="link">A propos</a>
           <a href="#realisations" class="link">Réalisations</a>
           <a href="#quote" class="btn-cta">Demandez un devis gratuit</a>
         </div>
@@ -200,8 +201,41 @@
           </div>
         </div>
       </section>
+
+      <section id="A_propos">
+        <h2>A propos</h2>
+
+
+        <div class="presentation">
+            <div class="presentation-img">
+    <img src="/images/photo_profil.png" alt="Photo de Willy Wacquier">
+  </div>
+  <div class="presentation-text">
+    <p>
+      Je m'appelle Willy Wacquier et suis le fondateur de Wil'Elec, entreprise d’électricité générale créée en janvier 2022. 
+              Avec plus de 100 chantiers réussis depuis sa création et plus de 25 ans d'expérience dans le domaine électrique. Avant de lancer mon activité, 
+              j’ai exercé comme projeteur en électricité pendant près de 20 ans, puis comme chargé d'affaires et chargé d’études pendant 
+              9 ans dans diverses entreprises du secteur.
+    </p>
+            <a href="https://www.linkedin.com/in/willy-wacquier-wil-elec-81a243229/" class="linkedin-btn" target="_blank">Rejoindre mon réseau
+              <i class="fa-brands fa-linkedin" style="color: #e0e4e4;"></i></a>
+  </div>
+</div>
+
+   
+      </section>
+
+
       <section id="realisations">
         <h2>Mes réalisations</h2>
+      </section>
+        		
+
+
+
+
+
+
       </section>
       <section id="quote">
         <div id="form-container">
@@ -260,7 +294,7 @@
     navLinks.style.display = "none";
   }
   function initMobileMenu() {
-    if (window.innerWidth < 769) {
+    if (window.innerWidth < 1260) {
       burgerIcon.addEventListener("click", () => {
         burgerIcon.style.display = "none";
         closeIcon.style.display = "inline-block";

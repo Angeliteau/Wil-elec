@@ -39,7 +39,6 @@
   text-align: center;
   position: relative;
   display: inline-block;
-  text-decoration: none;
   padding-bottom: 5px;
 }
 .link::after {
@@ -134,7 +133,7 @@ h2 {
   font-size: 40px;
   padding: 50px 0px;
 }
-#zone h2 {
+#zone h2, #realisations h2 {
   color: var(--color-secondary);
 }
 .wrap-services {
@@ -203,8 +202,63 @@ h3 {
 .liste-ville li {
   padding-right: 10px;
 }
-#realisations {
+
+
+
+#A_propos {
   background-color: var(--color-secondary);
+  padding: 0px 50px 100px 50px;
+}
+.presentation {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+
+.presentation-img img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.presentation-text p {
+  text-align: justify;
+  font-size: 20px;
+  max-width: 800px;
+}
+
+
+
+.linkedin-btn {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--color-accent); 
+  color: var(--color-secondary);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-btn:hover {
+  background-color: var(--color-primary);
+}
+
+.linkedin-btn i {
+  font-size: 18px;
+}
+
+
+
+
+#realisations {
+  background-color: var(--color-primary);
 }
 #form-container {
   display: flex;
@@ -249,18 +303,64 @@ button[type="submit"]:hover {
   justify-content: center;
 }
 @media screen and (min-width: 769px) and (max-width: 1260px) {
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+ .navbar-toggle {
+    display: block;
   }
   .navbar-logo img {
-    height: 60px;
-    margin-bottom: 20px;
+    max-height: 50px;
+    margin: 20px 0px 0px 40px;
+  }
+  #burger-icon {
+    display: block;
+    margin: 20px 40px 0px 20px;
+  }
+  #close-icon {
+    display: none;
+    margin: 20px 40px 0px 20px;
+  }
+  .navbar-toggle.active #burger-icon {
+    display: none;
+  }
+  .navbar-toggle.active #close-icon {
+    display: inline;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0px;
   }
   .navbar-link {
-    align-items: center;
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-secondary);
+    order: 3;
+    width: 95%;
+    padding: 10px 5px;
+    gap: 10px;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .navbar a.link {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-left: 0px;
+  }
+  .navbar-link.show {
+    display: flex;
+  }
+  .btn-cta {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-left: 0px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: none;
+    padding: 0px;
+    text-transform: none;
+  }
+  nav a.btn-cta:hover {
+    background-color: inherit;
+    color: var(--color-primary);
   }
   #landing {
     padding: 0 20px 20px;
@@ -283,7 +383,7 @@ button[type="submit"]:hover {
     padding: 30px 0;
   }
   .wrap-services {
-    padding: 50px 20px 100px;
+    padding: 0px 20px;
   }
   #zone {
     padding: 0 40px;
@@ -301,6 +401,9 @@ button[type="submit"]:hover {
   .villes {
     display: none;
   }
+  .presentation-text p {
+  font-size: 16px;
+}
   #form-container {
     padding: 0px 20px 50px 20px;
   }
@@ -444,6 +547,29 @@ button[type="submit"]:hover {
   }
   .villes {
     display: none;
+
+  }
+
+  .presentation {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+    .presentation-text p {
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
   #form-container {
     padding: 20px 50px 100px 50px;
@@ -452,7 +578,7 @@ button[type="submit"]:hover {
     padding: 10px;
     width: 100%;
   }
-}
+
 @keyframes rotateIn {
   from {
     transform: rotate(-45deg);
@@ -495,3 +621,5 @@ button[type="submit"]:hover {
   animation: fadeExpand 0.4s ease forwards;
   overflow: hidden;
 }
+
+
