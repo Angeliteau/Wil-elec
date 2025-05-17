@@ -283,52 +283,66 @@
         </div>
       </section>
     </main>
+
+
+
+
+
+
     <script>
-  const burgerIcon = document.getElementById("burger-icon");
-  const closeIcon = document.getElementById("close-icon");
-  const navLinks = document.getElementById("nav-links");
+  document.addEventListener("DOMContentLoaded", () => {
+    const burgerIcon = document.getElementById("burger-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const navLinks = document.getElementById("nav-links");
 
-  function closeMenu() {
-    navLinks.classList.remove("slide-down");
-    navLinks.classList.add("slide-up");
+    let isMobile = window.innerWidth < 1260;
 
-    setTimeout(() => {
-      navLinks.style.display = "none";
-      navLinks.classList.remove("slide-up");
-    }, 400);
+    function closeMenu() {
+      navLinks.classList.remove("slide-down");
+      navLinks.classList.add("slide-up");
 
-    closeIcon.style.display = "none";
-    burgerIcon.style.display = "inline-block";
-    burgerIcon.classList.add("slide-in-right");
-  }
-
-  function initMobileMenu() {
-      burgerIcon.addEventListener("click", () => {
-        burgerIcon.style.display = "none";
-        closeIcon.style.display = "inline-block";
-        closeIcon.classList.add("rotate-in");
-
-        navLinks.style.display = "flex";
+      setTimeout(() => {
+        navLinks.style.display = "none";
         navLinks.classList.remove("slide-up");
-        navLinks.classList.add("slide-down");
-      });
+      }, 400);
 
+      closeIcon.style.display = "none";
+      burgerIcon.style.display = "inline-block";
+    }
+
+    function openMenu() {
+      burgerIcon.style.display = "none";
+      closeIcon.style.display = "inline-block";
+      closeIcon.classList.add("rotate-in");
+
+      navLinks.style.display = "flex";
+      navLinks.classList.remove("slide-up");
+      navLinks.classList.add("slide-down");
+    }
+
+    function initMobileMenu() {
+      burgerIcon.addEventListener("click", openMenu);
       closeIcon.addEventListener("click", closeMenu);
 
       navLinks.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", closeMenu);
       });
+    }
 
-  }
+    initMobileMenu();
 
-  window.addEventListener("DOMContentLoaded", initMobileMenu);
+    // Gérer le changement de taille proprement
+    window.addEventListener("resize", () => {
+      const newIsMobile = window.innerWidth < 1260;
 
-  window.addEventListener("resize", () => {
-    burgerIcon.replaceWith(burgerIcon.cloneNode(true));
-    closeIcon.replaceWith(closeIcon.cloneNode(true));
-    location.reload();
+      if (newIsMobile !== isMobile) {
+        isMobile = newIsMobile;
+        // Ici tu peux ajouter des ajustements si besoin, mais sans reload
+      }
+    });
   });
 </script>
+
 
   </body>
 </html>
