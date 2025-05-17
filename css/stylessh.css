@@ -133,7 +133,8 @@ h2 {
   font-size: 40px;
   padding: 50px 0px;
 }
-#zone h2, #realisations h2 {
+#zone h2,
+#realisations h2 {
   color: var(--color-secondary);
 }
 .wrap-services {
@@ -203,8 +204,6 @@ h3 {
   padding-right: 10px;
 }
 
-
-
 #A_propos {
   background-color: var(--color-secondary);
   padding: 0px 50px 100px 50px;
@@ -222,14 +221,11 @@ h3 {
   border-radius: 10px;
 }
 
-
 .presentation-text p {
   text-align: justify;
   font-size: 20px;
   max-width: 800px;
 }
-
-
 
 .linkedin-btn {
   margin-top: 10px;
@@ -237,7 +233,7 @@ h3 {
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  background-color: var(--color-accent); 
+  background-color: var(--color-accent);
   color: var(--color-secondary);
   border-radius: 5px;
   text-decoration: none;
@@ -253,9 +249,6 @@ h3 {
 .linkedin-btn i {
   font-size: 18px;
 }
-
-
-
 
 #realisations {
   background-color: var(--color-primary);
@@ -303,7 +296,7 @@ button[type="submit"]:hover {
   justify-content: center;
 }
 @media screen and (min-width: 769px) and (max-width: 1260px) {
- .navbar-toggle {
+  .navbar-toggle {
     display: block;
   }
   .navbar-logo img {
@@ -402,8 +395,8 @@ button[type="submit"]:hover {
     display: none;
   }
   .presentation-text p {
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
   #form-container {
     padding: 0px 20px 50px 20px;
   }
@@ -519,7 +512,7 @@ button[type="submit"]:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0;
+    gap: 10px;
     padding: 0;
   }
   .wrap-services > div {
@@ -547,37 +540,23 @@ button[type="submit"]:hover {
   }
   .villes {
     display: none;
-
   }
 
   .presentation {
     flex-wrap: wrap;
     gap: 20px;
   }
-    .presentation-text p {
-  font-size: 16px;
+  .presentation-text p {
+    font-size: 16px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  }
-  #form-container {
-    padding: 20px 50px 100px 50px;
-  }
-  button[type="submit"] {
-    padding: 10px;
-    width: 100%;
-  }
+#form-container {
+  padding: 20px 50px 100px 50px;
+}
+button[type="submit"] {
+  padding: 10px;
+  width: 100%;
+}
 
 @keyframes rotateIn {
   from {
@@ -639,5 +618,3 @@ button[type="submit"]:hover {
   animation: fadeCollapse 0.4s ease forwards;
   overflow: hidden;
 }
-
-
