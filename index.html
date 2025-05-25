@@ -162,13 +162,28 @@
       </section>
       <section id="realisations">
         <h2>Mes réalisations</h2>
-        <div class="container">
-          <div class="carrousel" id="carrousel">
-            <img src="/images/lampes-elec.jpg" alt="1">
-            <img src="/images/lampes-elec.jpg" alt="2">
-            <img src="/images/lampes-elec.jpg" alt="3">
-            <img src="/images/lampes-elec.jpg" alt="3">
-            <img src="/images/lampes-elec.jpg" alt="3">
+        <div class="carrousel-wrapper">
+          <div id="carrousel">
+            <div class="presentation-card">
+              <img src="/images/carvin1.jpg" alt="Borne de recharge">
+              <p>Installation d’une borne de recharge pour véhicule électrique à Carvin</p>
+            </div>
+            <div class="presentation-card">
+              <img src="/images/genech1.jpg" alt="Salle de bain">
+              <p>Mise en place complète de l’électricité dans une salle de bain (éclairage, prises sécurisées, chauffage électrique, ventilation)</p>
+            </div>
+            <div class="presentation-card">
+              <img src="/images/carvin3.jpg" alt="Bureau aménagé">
+              <p>Installation complète de l’électricité dans un bureau à Carvin, avec la mise en place de prises pour un réseau internet</p>
+            </div>
+            <div class="presentation-card">
+              <img src="/images/genech2.jpg" alt="Rail d'éclairage">
+              <p>Luminaire sur rail dans un logement à Genech, offrant un éclairage modulable et design</p>
+            </div>
+            <div class="presentation-card">
+              <img src="/images/croix ben1.jpg" alt="Eclairage extérieur">
+              <p>pose d’un éclairage extérieur à Croix-ben, sécurisant et valorisant ainsi les espaces extérieurs</p>
+            </div>
           </div>
           <div class="buttons-preview">
             <button id="prev">
@@ -178,8 +193,8 @@
               <i class="fa-solid fa-arrow-right fa-2xl"></i>
             </button>
           </div>
+          <div class="carousel-dots" id="carousel-dots"></div>
         </div>
-      </section>
       </section>
       <section id="quote">
         <div id="form-container">
@@ -201,6 +216,99 @@
     </main>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // --- CARROUSEL ---
+        const carrousel = document.getElementById("carrousel");
+        const cards = [...document.querySelectorAll(".presentation-card")];
+        const prevBtn = document.getElementById("prev");
+        const nextBtn = document.getElementById("next");
+        const wrapper = document.querySelector(".carrousel-wrapper");
+        const dotsContainer = document.getElementById("carousel-dots");
+        let activeIndex = 2; // image centrale au départ
+        let startX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let isDragging = false;
+
+        function createDots() {
+          dotsContainer.innerHTML = "";
+          cards.forEach((_, i) => {
+            const dot = document.createElement("span");
+            dot.classList.add("dot");
+            if (i === activeIndex) dot.classList.add("active");
+            dot.addEventListener("click", () => {
+              centerCard(i);
+            });
+            dotsContainer.appendChild(dot);
+          });
+        }
+
+        function updateDots() {
+          const dots = dotsContainer.querySelectorAll(".dot");
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === activeIndex);
+          });
+        }
+
+        function getTranslateX(index) {
+          const wrapperWidth = wrapper.offsetWidth;
+          const cardStyle = getComputedStyle(cards[0]);
+          const cardWidth = cards[0].offsetWidth;
+          const cardMarginRight = parseInt(cardStyle.marginRight) || 0;
+          const totalCardWidth = cardWidth + cardMarginRight;
+          return totalCardWidth * index - (wrapperWidth / 2 - cardWidth / 2);
+        }
+
+        function setTranslate(x, withTransition = false) {
+          carrousel.style.transition = withTransition ? "transform 0.4s ease" : "none";
+          carrousel.style.transform = `translateX(${x}px)`;
+        }
+
+        function centerCard(index) {
+          activeIndex = Math.min(Math.max(index, 0), cards.length - 1);
+          currentTranslate = -getTranslateX(activeIndex);
+          prevTranslate = currentTranslate;
+          setTranslate(currentTranslate, true);
+          cards.forEach((card, i) => card.classList.toggle("active", i === activeIndex));
+          updateDots();
+        }
+        prevBtn.addEventListener("click", () => {
+          centerCard(activeIndex - 1);
+        });
+        nextBtn.addEventListener("click", () => {
+          centerCard(activeIndex + 1);
+        });
+        carrousel.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          isDragging = true;
+          carrousel.style.transition = "none";
+        });
+        carrousel.addEventListener("touchmove", (e) => {
+          if (!isDragging) return;
+          const currentX = e.touches[0].clientX;
+          const diff = currentX - startX;
+          let newTranslate = prevTranslate + diff;
+          const maxTranslate = 0;
+          const minTranslate = -getTranslateX(cards.length - 1);
+          if (newTranslate > maxTranslate) newTranslate = maxTranslate;
+          if (newTranslate < minTranslate) newTranslate = minTranslate;
+          currentTranslate = newTranslate;
+          setTranslate(currentTranslate, false);
+        });
+        carrousel.addEventListener("touchend", () => {
+          if (!isDragging) return;
+          isDragging = false;
+          const movedBy = currentTranslate - prevTranslate;
+          const threshold = cards[0].offsetWidth / 4;
+          if (movedBy < -threshold && activeIndex < cards.length - 1) {
+            activeIndex++;
+          } else if (movedBy > threshold && activeIndex > 0) {
+            activeIndex--;
+          }
+          centerCard(activeIndex);
+        });
+        createDots();
+        centerCard(activeIndex);
+        // --- MENU MOBILE ---
         const burgerIcon = document.getElementById("burger-icon");
         const closeIcon = document.getElementById("close-icon");
         const navLinks = document.getElementById("nav-links");
@@ -239,62 +347,6 @@
           if (newIsMobile !== isMobile) {
             isMobile = newIsMobile;
           }
-        });
-      });
-      const carrousel = document.getElementById('carrousel');
-      const images = carrousel.querySelectorAll('img');
-      let currentIndex = Math.floor(images.length / 2);
-
-      function updateCarousel() {
-        images.forEach((img, i) => {
-          img.classList.toggle('active', i === currentIndex);
-        });
-        const imgWidth = images[0].offsetWidth;
-        const containerWidth = carrousel.parentElement.offsetWidth;
-        const translateX = containerWidth / 2 - imgWidth * currentIndex - imgWidth / 2;
-        carrousel.style.transform = `translateX(${translateX}px)`;
-        const activeImg = images[currentIndex];
-        activeImg.classList.add('animate');
-        activeImg.addEventListener('animationend', () => {
-          activeImg.classList.remove('animate');
-        }, {
-          once: true
-        });
-      }
-      document.getElementById('prev').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateCarousel();
-      });
-      document.getElementById('next').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateCarousel();
-      });
-      window.addEventListener('load', updateCarousel);
-      window.addEventListener('resize', updateCarousel);
-      let startX = 0;
-      carrousel.addEventListener('touchstart', e => {
-        startX = e.touches[0].clientX;
-      }, {
-        passive: true
-      });
-      carrousel.addEventListener('touchend', e => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = startX - endX;
-        if (diff > 50) {
-          currentIndex = (currentIndex + 1) % images.length;
-          updateCarousel();
-        } else if (diff < -50) {
-          currentIndex = (currentIndex - 1 + images.length) % images.length;
-          updateCarousel();
-        }
-      });
-      ['click', 'touchstart'].forEach(evt => {
-        carrousel.addEventListener(evt, () => {
-          clearInterval(autoScroll);
-          autoScroll = setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-          }, 5000);
         });
       });
     </script>
