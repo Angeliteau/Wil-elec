@@ -304,11 +304,10 @@ h3 {
 }
 
 .buttons-preview {
-  padding-top: 20px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 50px;
 }
 
 #prev,
