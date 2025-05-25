@@ -252,7 +252,81 @@ h3 {
 
 #realisations {
   background-color: var(--color-primary);
+  overflow: hidden;
 }
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.carrousel {
+  display: flex;
+  overflow: visible;
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.4s ease;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.carrousel img {
+  width: 70%;
+  margin: 0;
+  opacity: 0.5;
+  transform: scale(0.85);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  user-select: none;
+  z-index: 0;
+}
+
+.carrousel img.active {
+  transform: scale(1);
+  border-radius: 10px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.buttons-preview {
+  padding-top: 20px;
+}
+
+#prev,
+#next {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid var(--color-secondary);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 18px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+#prev:hover,
+#next:hover {
+  background-color: var(--color-accent);
+}
+
+@keyframes zoomRadius {
+  0% {
+    border-radius: 0px;
+  }
+  50% {
+    border-radius: 5px;
+  }
+  100% {
+    border-radius: 10px;
+  }
+}
+
+.carrousel img.animate {
+  animation: zoomRadius 0.4s ease;
+}
+
 #form-container {
   display: flex;
   flex-direction: column;
@@ -548,6 +622,13 @@ button[type="submit"]:hover {
   }
   .presentation-text p {
     font-size: 16px;
+  }
+
+  .carrousel img {
+    width: 80%;
+  }
+  .buttons-preview {
+    display: none;
   }
 }
 #form-container {

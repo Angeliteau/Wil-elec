@@ -79,7 +79,7 @@
           <div class="service-item">
             <i class="fa-solid fa-wrench fa-2xl" style="color: #006991"></i>
             <h3>Dépannage</h3>
-            <p> Pannes d'électriques, dysfonctionnements de vos installations ou de réparations urgentes, intervention et remise en état de vos équipements </p>
+            <p> Pannes d'électricité, dysfonctionnements de vos installations ou de réparations urgentes, intervention et remise en état de vos équipements </p>
           </div>
           <div class="service-item">
             <i class="fa-solid fa-building fa-2xl" style="color: #006991"></i>
@@ -162,6 +162,23 @@
       </section>
       <section id="realisations">
         <h2>Mes réalisations</h2>
+        <div class="container">
+          <div class="carrousel" id="carrousel">
+            <img src="/images/lampes-elec.jpg" alt="1">
+            <img src="/images/lampes-elec.jpg" alt="2">
+            <img src="/images/lampes-elec.jpg" alt="3">
+            <img src="/images/lampes-elec.jpg" alt="3">
+            <img src="/images/lampes-elec.jpg" alt="3">
+          </div>
+          <div class="buttons-preview">
+            <button id="prev">
+              <i class="fa-solid fa-arrow-left fa-2xl"></i>
+            </button>
+            <button id="next">
+              <i class="fa-solid fa-arrow-right fa-2xl"></i>
+            </button>
+          </div>
+        </div>
       </section>
       </section>
       <section id="quote">
@@ -222,6 +239,62 @@
           if (newIsMobile !== isMobile) {
             isMobile = newIsMobile;
           }
+        });
+      });
+      const carrousel = document.getElementById('carrousel');
+      const images = carrousel.querySelectorAll('img');
+      let currentIndex = Math.floor(images.length / 2);
+
+      function updateCarousel() {
+        images.forEach((img, i) => {
+          img.classList.toggle('active', i === currentIndex);
+        });
+        const imgWidth = images[0].offsetWidth;
+        const containerWidth = carrousel.parentElement.offsetWidth;
+        const translateX = containerWidth / 2 - imgWidth * currentIndex - imgWidth / 2;
+        carrousel.style.transform = `translateX(${translateX}px)`;
+        const activeImg = images[currentIndex];
+        activeImg.classList.add('animate');
+        activeImg.addEventListener('animationend', () => {
+          activeImg.classList.remove('animate');
+        }, {
+          once: true
+        });
+      }
+      document.getElementById('prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+      });
+      document.getElementById('next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+      });
+      window.addEventListener('load', updateCarousel);
+      window.addEventListener('resize', updateCarousel);
+      let startX = 0;
+      carrousel.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      }, {
+        passive: true
+      });
+      carrousel.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        if (diff > 50) {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateCarousel();
+        } else if (diff < -50) {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateCarousel();
+        }
+      });
+      ['click', 'touchstart'].forEach(evt => {
+        carrousel.addEventListener(evt, () => {
+          clearInterval(autoScroll);
+          autoScroll = setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarousel();
+          }, 5000);
         });
       });
     </script>
