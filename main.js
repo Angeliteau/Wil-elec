@@ -1,11 +1,11 @@
       document.addEventListener("DOMContentLoaded", () => {
         // --- CARROUSEL ---
         const carrousel = document.getElementById("carrousel");
-        const cards = [...document.querySelectorAll(".presentation-card")];
+        const cards = [...document.querySelectorAll(".realisation-card")];
         const prevBtn = document.getElementById("prev");
         const nextBtn = document.getElementById("next");
         const wrapper = document.querySelector(".carrousel-wrapper");
-        const dotsContainer = document.getElementById("carousel-dots");
+        const dotsContainer = document.querySelector(".carousel-dots");
         let activeIndex = 2; // image centrale au départ
         let startX = 0;
         let currentTranslate = 0;
@@ -95,7 +95,7 @@
         const burgerIcon = document.getElementById("burger-icon");
         const closeIcon = document.getElementById("close-icon");
         const navLinks = document.getElementById("nav-links");
-        let isMobile = window.innerWidth < 1260;
+        let isMobile = window.innerWidth < 1085;
 
         function closeMenu() {
           navLinks.classList.remove("slide-down");
@@ -126,7 +126,7 @@
         }
         initMobileMenu();
         window.addEventListener("resize", () => {
-          const newIsMobile = window.innerWidth < 1260;
+          const newIsMobile = window.innerWidth < 1085;
           if (newIsMobile !== isMobile) {
             isMobile = newIsMobile;
           }

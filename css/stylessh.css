@@ -217,7 +217,6 @@ h3 {
   margin: auto;
 }
 
-
 .presentation-img img {
   max-width: 250px;
   height: auto;
@@ -248,7 +247,6 @@ h3 {
   background-color: var(--color-primary);
 }
 
-
 #realisations {
   background-color: var(--color-primary);
 }
@@ -263,7 +261,7 @@ h3 {
   display: flex;
 }
 
-.presentation-card {
+.realisation-card {
   flex: 0 0 auto;
   width: 500px;
   display: flex;
@@ -272,8 +270,7 @@ h3 {
   text-align: center;
 }
 
-
-.presentation-card img {
+.realisation-card img {
   width: 100%;
   height: 350px;
   object-fit: cover;
@@ -283,27 +280,27 @@ h3 {
   transform: scale(0.85);
 }
 
-.presentation-card.active img {
+.realisation-card.active img {
   opacity: 1;
   transform: scale(1);
   z-index: 2;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.presentation-card p {
+.realisation-card p {
   padding: 10px 5px;
   font-size: 18px;
   color: var(--color-secondary);
 }
 
-.presentation-card p {
+.realisation-card p {
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  min-height: 20px; 
+  transition: opacity 0.1s ease;
+  min-height: 20px;
 }
 
-.presentation-card.active p {
+.realisation-card.active p {
   visibility: visible;
   opacity: 1;
 }
@@ -329,15 +326,13 @@ h3 {
 
 #prev:hover,
 #next:hover {
-   background-color: #017bac;
+  background-color: #017bac;
 }
 
 #prev:active,
 #next:active {
   animation: pop 0.3s ease;
 }
-
-
 
 .carousel-dots {
   display: none;
@@ -401,69 +396,7 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 769px) and (max-width: 1260px) {
-  .navbar-toggle {
-    display: block;
-  }
-  .navbar-logo img {
-    max-height: 50px;
-    margin: 20px 0px 0px 40px;
-  }
-  #burger-icon {
-    display: block;
-    margin: 20px 40px 0px 20px;
-  }
-  #close-icon {
-    display: none;
-    margin: 20px 40px 0px 20px;
-  }
-  .navbar-toggle.active #burger-icon {
-    display: none;
-  }
-  .navbar-toggle.active #close-icon {
-    display: inline;
-  }
-  .navbar {
-    flex-wrap: wrap;
-    padding: 0px;
-  }
-  .navbar-link {
-    display: none;
-    flex-direction: column;
-    background-color: var(--color-secondary);
-    order: 3;
-    width: 95%;
-    padding: 10px 5px;
-    gap: 10px;
-    margin: auto;
-    border-radius: 10px;
-  }
-  .navbar a.link {
-    color: var(--color-primary);
-    font-weight: 600;
-    margin-left: 0px;
-  }
-  .navbar-link.show {
-    display: flex;
-  }
-  .btn-cta {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-left: 0px;
-    text-align: center;
-    display: inline-block;
-    box-shadow: none;
-    padding: 0px;
-    text-transform: none;
-  }
-  nav a.btn-cta:hover {
-    background-color: inherit;
-    color: var(--color-primary);
-  }
-  #landing {
-    padding: 0 20px 20px;
-  }
+@media screen and (min-width: 769px) and (max-width: 1360px) {
   .intro {
     padding: 0px 50px 80px 50px;
   }
@@ -501,18 +434,18 @@ button[type="submit"]:hover {
     display: none;
   }
   .presentation {
-  max-width: 100%;
-}
+    max-width: 100%;
+  }
 
   .presentation-img img {
-  max-width: 180px;
-}
+    max-width: 180px;
+  }
 
-.presentation-text p {
-  text-align: justify;
-  font-size: 20px;
-  max-width: 800px;
-}
+  .presentation-text p {
+    text-align: justify;
+    font-size: 20px;
+    max-width: 800px;
+  }
   .presentation-text p {
     font-size: 16px;
   }
@@ -521,7 +454,17 @@ button[type="submit"]:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1086px) and (max-width: 1360px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar-logo {
+    padding-bottom: 20px;
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 1085px) {
   .navbar-toggle {
     display: block;
   }
@@ -581,6 +524,9 @@ button[type="submit"]:hover {
     background-color: inherit;
     color: var(--color-primary);
   }
+}
+
+@media screen and (max-width: 768px) {
   .contacts {
     display: flex;
     justify-content: center;
@@ -662,10 +608,9 @@ button[type="submit"]:hover {
     display: none;
   }
 
-
   .presentation-img img {
-  max-width: 180px;
-}
+    max-width: 180px;
+  }
 
   .presentation {
     flex-wrap: wrap;
@@ -685,15 +630,15 @@ button[type="submit"]:hover {
     padding-bottom: 30px;
   }
 
-  .presentation-card {
-    width: 250px;
+  .realisation-card {
+    width: 300px;
   }
 
   .buttons-preview {
     display: none;
   }
 
-  .presentation-card p {
+  .realisation-card p {
     font-size: 16px;
     padding: 5px 0px;
   }
@@ -710,7 +655,6 @@ button[type="submit"] {
   width: 100%;
 }
 
-
 .rotate-in {
   animation: rotateIn 0.3s ease forwards;
 }
@@ -723,8 +667,6 @@ button[type="submit"] {
   animation: fadeExpand 0.4s ease forwards;
   overflow: hidden;
 }
-
-
 
 .slide-up {
   animation: fadeCollapse 0.4s ease forwards;

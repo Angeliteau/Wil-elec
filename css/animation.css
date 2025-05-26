@@ -1,10 +1,16 @@
-    @keyframes pop {
-      0%   { transform: scale(1); }
-      50%  { transform: scale(0.90); }
-      100% { transform: scale(1); }
-    }
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-    @keyframes fadeCollapse {
+@keyframes fadeCollapse {
   0% {
     height: 220px;
     opacity: 1;
