@@ -209,8 +209,8 @@ h3 {
   padding: 50px;
 }
 .presentation {
-  padding-top: 50px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 50px;
   justify-content: center;
@@ -226,11 +226,9 @@ h3 {
 .presentation-text p {
   text-align: justify;
   font-size: 1.25rem;
-  max-width: 800px;
 }
 
 .linkedin-btn {
-  margin-top: 10px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -571,7 +569,7 @@ button[type="submit"]:hover {
     padding: 0 20px 40px;
   }
   #about {
-    padding: 10px 40px;
+    padding: 0px 40px;
   }
   .presentation-img img {
     max-width: 180px;
@@ -583,7 +581,7 @@ button[type="submit"]:hover {
     padding: 0px 0px 20px 0px;
   }
   .presentation-text p {
-    font-size: 	0.875rem;
+    font-size: 	1em;
   }
   .linkedin-btn {
     font-size: 	0.875rem;
