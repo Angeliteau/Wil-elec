@@ -213,7 +213,6 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  justify-content: center;
   max-width: 80%;
   margin: auto;
 }
@@ -537,6 +536,9 @@ button[type="submit"]:hover {
   h2 {
     padding: 30px 0;
     font-size: 	1.875rem;
+  }
+  #about h2 {
+    padding: 30px 0px 0px 0px;
   }
   .wrap-services {
     display: flex;
