@@ -1,3 +1,20 @@
+.rotate-in {
+  animation: rotateIn 0.3s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.3s ease forwards;
+}
+
+.slide-down {
+  animation: fadeExpand 0.4s ease forwards;
+  overflow: hidden;
+}
+
+.slide-up {
+  animation: fadeCollapse 0.4s ease forwards;
+  overflow: hidden;
+}
 @keyframes pop {
   0% {
     transform: scale(1);

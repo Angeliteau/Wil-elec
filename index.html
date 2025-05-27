@@ -34,7 +34,6 @@
         "sameAs": ["https://www.instagram.com/willywacquier/"]
       }
     </script>
-    <script src="/main.js"></script>
   </head>
   <body>
     <header id="landing">
@@ -55,16 +54,16 @@
         <div class="navbar-link" id="nav-links">
           <a href="#services" class="link">Mes services</a>
           <a href="#zone" class="link">Zone d'intervention</a>
-          <a href="#A_propos" class="link">A propos</a>
-          <a href="#realisations" class="link">Réalisations</a>
+          <a href="#about" class="link">A propos</a>
+          <a href="#work" class="link">Réalisations</a>
           <a href="#quote" class="btn-cta">Demandez un devis gratuit</a>
         </div>
-        <div class="navbar-toggle">
-          <i class="fa-solid fa-bars fa-xl" id="burger-icon" style="color: #ffffff"></i>
-          <i class="fa-solid fa-xmark fa-xl" id="close-icon" style="color: #ffffff"></i>
-        </div>
+        <button class="navbar-toggle">
+          <i class="fa-solid fa-bars fa-xl" id="burger-icon" style="color: #ffffff" aria-expanded="true"></i>
+          <i class="fa-solid fa-xmark fa-xl" id="close-icon" style="color: #ffffff" aria-expanded="false"></i>
+        </button>
       </nav>
-      <div class="intro">
+      <div class="hero">
         <h1>Spécialisé en Électricité Générale <br />à Lille et Environs </h1>
         <p>Domotique - Intrusion - Vidéosurveillance - Dépannage</p>
       </div>
@@ -75,7 +74,7 @@
         <div class="wrap-services">
           <div class="service-item">
             <i class="fa-solid fa-house fa-2xl" style="color: #006991"></i>
-            <h3>Habitations neuves ou rénovation</h3>
+            <h3>Neuf ou rénovation</h3>
             <p> Aussi bien dans des constructions neuves respectant les dernières normes que dans des bâtiments anciens nécessitant une remise aux normes ou une modernisation </p>
           </div>
           <div class="service-item">
@@ -85,7 +84,7 @@
           </div>
           <div class="service-item">
             <i class="fa-solid fa-building fa-2xl" style="color: #006991"></i>
-            <h3>Secteur du petit tertiaire</h3>
+            <h3>Secteur petit tertiaire</h3>
             <p> Accompagnement des commerces, bureaux, cabinets professionnels et petites entreprises dans leurs installations, rénovations et mises en conformité électriques </p>
           </div>
           <div class="service-item">
@@ -149,7 +148,7 @@
           </div>
         </div>
       </section>
-      <section id="A_propos">
+      <section id="about">
         <h2>A propos</h2>
         <div class="presentation">
           <div class="presentation-img">
@@ -162,7 +161,7 @@
           </div>
         </div>
       </section>
-      <section id="realisations">
+      <section id="work">
         <h2>Mes réalisations</h2>
         <div class="carrousel-wrapper">
           <div id="carrousel">
@@ -216,5 +215,6 @@
         </div>
       </section>
     </main>
+      <script src="/main.js"></script>
   </body>
 </html>
