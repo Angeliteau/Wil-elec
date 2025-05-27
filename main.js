@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- UTILITAIRES ---
+  // === UTILITAIRES ===
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
 
-  // --- VARIABLES GLOBALES ---
+  // === CARROUSEL ===
   const carrousel = $("#carrousel");
   const cards = $$(".realisation-card");
   const prevBtn = $("#prev");
@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let isDragging = false;
   let animationID;
 
-  // --- CARROUSEL ---
   function getTranslateX(index) {
     const wrapperWidth = wrapper.offsetWidth;
     const cardStyle = getComputedStyle(cards[0]);
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isDragging) requestAnimationFrame(animate);
   }
 
-  // --- GESTION DES TOUCHES ---
+  // --- Touches tactiles ---
   carrousel.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
     isDragging = true;
@@ -101,16 +100,18 @@ document.addEventListener("DOMContentLoaded", () => {
     centerCard(activeIndex);
   }, { passive: true });
 
+  // --- Boutons ---
   prevBtn.addEventListener("click", () => centerCard(activeIndex - 1));
   nextBtn.addEventListener("click", () => centerCard(activeIndex + 1));
 
   createDots();
   centerCard(activeIndex);
 
-  // --- MENU MOBILE ---
+  // === MENU MOBILE ===
   const burgerIcon = $("#burger-icon");
   const closeIcon = $("#close-icon");
   const navLinks = $("#nav-links");
+
   let isMobile = window.innerWidth < 1085;
 
   function closeMenu() {
@@ -133,20 +134,16 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.add("slide-down");
   }
 
-  function initMobileMenu() {
-    burgerIcon.addEventListener("click", openMenu);
-    closeIcon.addEventListener("click", closeMenu);
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", closeMenu);
-    });
-  }
+  burgerIcon.addEventListener("click", openMenu);
+  closeIcon.addEventListener("click", closeMenu);
 
-  initMobileMenu();
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (isMobile) closeMenu();
+    });
+  });
 
   window.addEventListener("resize", () => {
-    const newIsMobile = window.innerWidth < 1085;
-    if (newIsMobile !== isMobile) {
-      isMobile = newIsMobile;
-    }
+    isMobile = window.innerWidth < 1085;
   });
 });
