@@ -25,7 +25,7 @@ img {
 
 /* HEADER */
 #landing {
-  min-height: 100vh;
+  background-color: var(--color-primary);
   background: linear-gradient(
     to bottom,
     #006991 50%,
@@ -33,6 +33,7 @@ img {
     #cbd6d6 90%,
     #e0e4e4 100%
   );
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -159,17 +160,12 @@ h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  padding: 40px 0px;
 }
 #zone h2,
 #work h2 {
   color: var(--color-secondary);
-  padding-top: 40px;
 }
-#quote h2 {
-  padding-top: 40px;
-}
-
 /* SERVICES */
 #services {
   background-color: var(--color-secondary);
@@ -218,6 +214,7 @@ h3 {
 #zone {
   background-color: var(--color-primary);
   padding: 0 100px;
+  min-height: 100vh;
   color: var(--color-secondary);
   font-size: 1.375rem;
   padding: 50px;
@@ -229,7 +226,7 @@ h3 {
   align-items: center;
 }
 .img-wrapper {
-  width: 600px;
+  width: 800px;
 }
 
 .MEL {
@@ -595,9 +592,6 @@ button[type="submit"]:hover {
     flex-direction: column;
     justify-content: center;
   }
-  #about h2 {
-    padding: 30px 0px 0px 0px;
-  }
   .wrap-services > div {
     flex: 1 1 100%;
     max-width: 100%;
@@ -618,7 +612,7 @@ button[type="submit"]:hover {
     padding: 0px 0px 50px 0px;
   }
   .text-zi {
-    padding: 0 20px 40px;
+    padding-bottom: 40px;
   }
   #about {
     padding: 0px 40px;

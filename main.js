@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const $$ = (selector) => [...document.querySelectorAll(selector)];
 
 
-  
-
-
   // === CARROUSEL ===
   const carrousel = $("#carrousel");
   const cards = $$(".realisation-card");
