@@ -475,11 +475,11 @@ button[type="submit"]:hover {
   }
   #burger-icon {
     display: block;
-    margin: 20px 40px 0px 20px;
+    margin: 50px 40px 0px 20px;
   }
   #close-icon {
     display: none;
-    margin: 20px 40px 0px 20px;
+    margin: 50px 40px 0px 20px;
   }
   .navbar-toggle.active #burger-icon {
     display: none;
@@ -499,7 +499,7 @@ button[type="submit"]:hover {
     width: 95%;
     padding: 10px 5px;
     gap: 10px;
-    margin: auto;
+    margin: 10px auto;
     border-radius: 10px;
   }
   .navbar a.link {
@@ -537,6 +537,9 @@ button[type="submit"]:hover {
   .wrap-services > div {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
+  }
+  h3 {
+    margin: 0px;
   }
   .zi {
     flex-wrap: wrap;
