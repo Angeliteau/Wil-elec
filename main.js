@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
 
-
   // === CARROUSEL ===
   const carrousel = $("#carrousel");
   const cards = $$(".realisation-card");
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const wrapper = $(".carrousel-wrapper");
   const dotsContainer = $(".carousel-dots");
 
-  let activeIndex = 2;
+  let activeIndex = 4;
   let startX = 0;
   let currentX = 0;
   let currentTranslate = 0;
