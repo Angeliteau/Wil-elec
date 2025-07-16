@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.style.display = "flex";
     navLinks.classList.remove("slide-up");
     navLinks.classList.add("slide-down");
+    navbarToggle.setAttribute("aria-expanded", "true");
   }
 
   burgerIcon.addEventListener("click", openMenu);
