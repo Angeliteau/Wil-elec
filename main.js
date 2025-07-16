@@ -3,6 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
 
+
+  // === APPARITION REALISATIONS ===
+  const cards = document.querySelectorAll('.realisation-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach(card => observer.observe(card));
+
   // === MENU MOBILE ===
   const burgerIcon = $("#burger-icon");
   const closeIcon = $("#close-icon");
