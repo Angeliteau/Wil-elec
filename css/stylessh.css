@@ -194,7 +194,6 @@
  #zone {
      background-color: var(--color-primary);
      padding: 3.125rem;
-     min-height: 100vh;
      color: var(--color-secondary);
      font-size: 1.375rem;
 }
