@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
 
-
   // === APPARITION REALISATIONS ===
   const cards = document.querySelectorAll('.realisation-card');
 
@@ -25,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const burgerIcon = $("#burger-icon");
   const closeIcon = $("#close-icon");
   const navLinks = $("#nav-links");
+  const navbarToggle = document.querySelector(".navbar-toggle");
 
   let isMobile = window.innerWidth < 1085;
 
@@ -37,6 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 400);
     closeIcon.style.display = "none";
     burgerIcon.style.display = "inline-block";
+    
+    // Mise à jour aria
+    navbarToggle.setAttribute("aria-expanded", "false");
+    navbarToggle.setAttribute("aria-label", "Ouvrir le menu");
   }
 
   function openMenu() {
@@ -46,7 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.style.display = "flex";
     navLinks.classList.remove("slide-up");
     navLinks.classList.add("slide-down");
+    
+    // Mise à jour aria
     navbarToggle.setAttribute("aria-expanded", "true");
+    navbarToggle.setAttribute("aria-label", "Fermer le menu");
   }
 
   burgerIcon.addEventListener("click", openMenu);
